@@ -1,0 +1,106 @@
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transform($transform...){
+	-moz-transform: $transform;
+	-o-transform: $transform;
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin vertical-align {
+	@include transform(translateY(-50%));
+	position: relative;
+	top: 50%;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+@mixin box-shadow($boxshadow...) {
+	-webkit-box-shadow: $boxshadow;
+	    -moz-box-shadow: $boxshadow;
+	    box-shadow: $boxshadow;
+}
+
+// screen breakpoints //
+@mixin screen($media) {
+    @if $media == mobile {
+        @media only screen and (min-width: $mobile) {
+            @content;
+        }
+    }
+    @else if $media == mobile-m {
+        @media only screen and (min-width: $mobile-m) {
+            @content;
+        }
+    }
+    @else if $media == mobile-l {
+        @media only screen and (min-width: $mobile-l) {
+            @content;
+        }
+    }
+    @else if $media == mobile-max {
+        @media only screen and (max-width: $mobile-l) {
+            @content;
+        }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: $tablet) {
+            @content;
+        }
+    }
+    @else if $media == tablet-m {
+        @media only screen and (min-width: $tablet-m) {
+            @content;
+        }
+    }
+    @else if $media == tablet-l {
+        @media only screen and (min-width: $tablet-l) {
+            @content;
+        }
+    }
+    @else if $media == tablet-max {
+        @media only screen and (max-width: $tablet) {
+            @content;
+        }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: $desktop) {
+            @content;
+        }
+    }
+    @else if $media == desktop-m {
+        @media only screen and (min-width: $desktop-m) {
+            @content;
+        }
+    }
+    @else if $media == desktop-l {
+        @media only screen and (min-width: $desktop-l) {
+            @content;
+        }
+    }
+}
+
+@mixin paragraph(){
+    font-family:15px;
+    line-height:24px;
+    letter-spacing: 0.04em;
+    @include screen(tablet-l) {
+        font-family:17px;
+        line-height:28px;
+    }
+}

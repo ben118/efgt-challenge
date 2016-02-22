@@ -1,0 +1,71 @@
+%btn , .btn{
+	@include border-radius(20px);
+	@include transition(all .4s ease-in-out);
+	font-family: $pt-sans;
+	font-size: 15px;
+	line-height: 29px;
+	font-weight: 500;
+	border: 1px solid transparent;
+	color: #464646;
+	display: inline-block;
+	padding: 0 20px;
+	text-decoration: none;
+	cursor: pointer;
+	padding-top: 1px;
+	background: none;
+	text-align: center;
+	&:hover, &:focus{
+		text-decoration: none;
+	}
+	&.primary{
+		border-color: #1397a5;
+		color: #1397a5;
+		&:hover, &:focus{
+			background-color: #1397a5;
+			color: $white;
+		}
+		&.red{
+			border-color: $red;
+			color: $red;
+			&:hover, &:focus{
+				background-color: #ff643e;
+				color: $white;
+			}
+		}
+	}
+	&.secondary{
+		background-color: #1397a5;
+		color: $white;
+		&:hover, &:focus{
+			background-color: #138d9a;
+		}
+		&.red{
+			background-color: $red;
+			color: $white;
+			&:hover, &:focus{
+				background-color: #ff643e;
+			}
+		}
+	}
+	&.medium{
+		@include border-radius(40px);
+		padding: 0 28px;
+		font-size: 17px;
+		line-height: 48px;
+		letter-spacing: 0.01em;
+		@include screen(mobile) {
+			font-size: 15px;
+		}
+	}
+	&.download-btn{
+		position: relative;
+		padding-left: 37px;
+		padding-right: 16px;
+		i{
+			display: block;
+			position: absolute;
+			left: 14px;
+			padding-top: 7px;
+		}
+	}
+}

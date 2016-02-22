@@ -1,0 +1,60 @@
+.footer{
+	background:$blue;
+	padding:40px 0;
+	@include screen(tablet-l) {
+		height:130px;
+		padding:40px 0 0 0;
+	}
+	.container{
+		position:relative;
+	}
+	&__logo{
+		width:140px;
+		height:40px;
+		display:table;
+		margin:0 auto;
+		background:url("#{$imagedir}/efgt-challenge-logo-mobile.svg") 0 0 no-repeat;
+		background-size:100% auto;	
+		@include screen(tablet) {
+			width:220px;
+			height:26px;
+			background:url("#{$imagedir}/efgt-challenge-logo.svg") 0 0 no-repeat;
+			background-size:100% auto;	
+		}
+		@include screen(tablet-l) {
+			position:absolute;
+			left:30px;
+			top:2px;
+		}
+		@include screen(desktop) {
+			width:250px;
+		}
+	}
+	.copyright{
+		font-size:13px;
+		line-height:18px;
+		color:$white;
+		text-align:center;
+		opacity:0.5;
+		margin:10px 0 20px 0;
+		@include screen(tablet-l) {
+			font-size:14px;
+			margin:0;
+		}
+	}
+	.social-links{
+		color:$white;
+		text-align:center;
+		font-size:13px;
+		line-height:18px;
+		@include screen(tablet-l) {
+			font-size:14px;
+			position:absolute;
+			right:30px;
+			top:2px;
+		}
+		a{
+			color:$white;
+		}
+	}
+}

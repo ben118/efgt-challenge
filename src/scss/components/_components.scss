@@ -1,0 +1,60 @@
+// components
+body{
+  font-family:$baseFontFamily;
+  font-size: $baseFontSize;
+  color: $baseFontColor;
+  line-height:$baseLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.bodyhidden{
+    overflow:hidden;
+  }
+}
+a{
+  outline:none;
+  color:$blue;
+  &:active , &:visited , &:link , &:focus{
+    outline:none;
+  }
+}
+img{
+  max-width:100%;
+}
+ul{
+	list-style:none;
+  padding:0;
+  margin:0;
+}
+b , strong{
+    font-weight:700;
+    font-family:$baseFontFamily;
+}
+em , i{
+    font-family:$baseFontFamily;
+    font-style:italic;
+}
+:focus {
+  outline:none;
+}
+.container {
+    @include clearfix;
+    padding:0 15px;
+    @include screen(tablet) {
+        padding:0 20px;
+    }
+    @include screen(desktop-l) {
+       padding:0 30px;
+    }
+}
+.hide-on-mobile{
+  display:none;
+  @include screen(tablet) {
+    display: block;
+  }
+}
+.hide-on-desktop{
+  display: block;
+  @include screen(tablet) {
+    display: none;
+  }
+}
