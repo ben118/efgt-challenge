@@ -1,0 +1,14 @@
+.input ,
+input[type="text"], 
+input[type="email"],
+input[type="password"] {
+    border: 1px solid $inputBrColor;
+    font-family:$pt-sans;
+    font-size: 17px;
+    height: 40px;
+    letter-spacing: 0.03em;
+    line-height: 22px;
+    padding: 8px 12px;
+    width: 100%;
+    margin:0 0 10px 0;
+}

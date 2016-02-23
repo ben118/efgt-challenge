@@ -2,70 +2,53 @@
 	@include border-radius(20px);
 	@include transition(all .4s ease-in-out);
 	font-family: $pt-sans;
-	font-size: 15px;
-	line-height: 29px;
-	font-weight: 500;
-	border: 1px solid transparent;
-	color: #464646;
+	font-size: 16px;
+	border: 1px solid $green;;
 	display: inline-block;
-	padding: 0 20px;
+	padding:8px 30px;
 	text-decoration: none;
 	cursor: pointer;
-	padding-top: 1px;
-	background: none;
+	color:$white;
+	background: $green;
 	text-align: center;
+	min-width:170px;
 	&:hover, &:focus{
 		text-decoration: none;
+		background:lighten($green , 5%);
 	}
-	&.primary{
-		border-color: #1397a5;
-		color: #1397a5;
-		&:hover, &:focus{
-			background-color: #1397a5;
-			color: $white;
-		}
-		&.red{
-			border-color: $red;
-			color: $red;
-			&:hover, &:focus{
-				background-color: #ff643e;
-				color: $white;
-			}
-		}
+	&:active, &:link{
+		text-decoration: none;
+		background:darken($green , 5%);
 	}
 	&.secondary{
-		background-color: #1397a5;
+		border-color:$blue;
+		background-color: $blue;
 		color: $white;
 		&:hover, &:focus{
-			background-color: #138d9a;
+			background-color: $darkblue;
 		}
-		&.red{
-			background-color: $red;
-			color: $white;
-			&:hover, &:focus{
-				background-color: #ff643e;
-			}
+		&:active, &:link{
+			background-color: $blue;
+		}
+	}
+	&.transbtn{
+		background:none;
+		color:$green;
+		&:hover, &:focus , &:active, &:link{
+			background:$green;
+			color:$white;
+		}
+	}
+	&.transbtn-secondary{
+		background:none;
+		color:$blue;
+		&:hover, &:focus , &:active, &:link{
+			background:$blue;
+			color:$white;
 		}
 	}
 	&.medium{
-		@include border-radius(40px);
-		padding: 0 28px;
-		font-size: 17px;
-		line-height: 48px;
-		letter-spacing: 0.01em;
-		@include screen(mobile) {
-			font-size: 15px;
-		}
-	}
-	&.download-btn{
-		position: relative;
-		padding-left: 37px;
-		padding-right: 16px;
-		i{
-			display: block;
-			position: absolute;
-			left: 14px;
-			padding-top: 7px;
-		}
+		padding:5px 15px;
+		font-size:15px;
 	}
 }

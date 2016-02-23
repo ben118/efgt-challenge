@@ -573,7 +573,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 32px;
   line-height: 40px; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 768px) {
     h1 {
       font-size: 42px;
       line-height: 56px; } }
@@ -581,7 +581,7 @@ h1 {
 h2 {
   font-size: 24px;
   line-height: 32px; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 768px) {
     h2 {
       font-size: 32px;
       line-height: 40px; } }
@@ -590,7 +590,7 @@ h3 {
   font-size: 22px;
   line-height: 28px;
   font-weight: 700; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 768px) {
     h3 {
       font-size: 24px;
       line-height: 32px; } }
@@ -598,7 +598,7 @@ h3 {
 h4 {
   font-size: 18px;
   line-height: 28px; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 768px) {
     h4 {
       font-size: 22px;
       line-height: 28px; } }
@@ -675,6 +675,19 @@ em, i {
     .hide-on-desktop {
       display: none; } }
 
+.error {
+  color: #ff322d;
+  font-size: 13px;
+  padding: 10px 0;
+  clear: both; }
+  @media only screen and (min-width: 768px) {
+    .error {
+      font-size: 15px; } }
+
+.errorinput {
+  color: #ff322d !important;
+  border-color: #ff322d !important; }
+
 .btn {
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -685,63 +698,59 @@ em, i {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   font-family: "PT Sans", sans-serif;
-  font-size: 15px;
-  line-height: 29px;
-  font-weight: 500;
-  border: 1px solid transparent;
-  color: #464646;
+  font-size: 16px;
+  border: 1px solid #8cbd2f;
   display: inline-block;
-  padding: 0 20px;
+  padding: 8px 30px;
   text-decoration: none;
   cursor: pointer;
-  padding-top: 1px;
-  background: none;
-  text-align: center; }
+  color: #fff;
+  background: #8cbd2f;
+  text-align: center;
+  min-width: 170px; }
   .btn:hover, .btn:focus {
-    text-decoration: none; }
-  .btn.primary {
-    border-color: #1397a5;
-    color: #1397a5; }
-    .btn.primary:hover, .btn.primary:focus {
-      background-color: #1397a5;
-      color: #fff; }
-    .btn.primary.red {
-      border-color: #eb4827;
-      color: #eb4827; }
-      .btn.primary.red:hover, .btn.primary.red:focus {
-        background-color: #ff643e;
-        color: #fff; }
+    text-decoration: none;
+    background: #9ace38; }
+  .btn:active, .btn:link {
+    text-decoration: none;
+    background: #7da92a; }
   .btn.secondary {
-    background-color: #1397a5;
+    border-color: #214975;
+    background-color: #214975;
     color: #fff; }
     .btn.secondary:hover, .btn.secondary:focus {
-      background-color: #138d9a; }
-    .btn.secondary.red {
-      background-color: #eb4827;
+      background-color: #17385c; }
+    .btn.secondary:active, .btn.secondary:link {
+      background-color: #214975; }
+  .btn.transbtn {
+    background: none;
+    color: #8cbd2f; }
+    .btn.transbtn:hover, .btn.transbtn:focus, .btn.transbtn:active, .btn.transbtn:link {
+      background: #8cbd2f;
       color: #fff; }
-      .btn.secondary.red:hover, .btn.secondary.red:focus {
-        background-color: #ff643e; }
+  .btn.transbtn-secondary {
+    background: none;
+    color: #214975; }
+    .btn.transbtn-secondary:hover, .btn.transbtn-secondary:focus, .btn.transbtn-secondary:active, .btn.transbtn-secondary:link {
+      background: #214975;
+      color: #fff; }
   .btn.medium {
-    -webkit-border-radius: 40px;
-    border-radius: 40px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */
-    padding: 0 28px;
-    font-size: 17px;
-    line-height: 48px;
-    letter-spacing: 0.01em; }
-    @media only screen and (min-width: 320px) {
-      .btn.medium {
-        font-size: 15px; } }
-  .btn.download-btn {
-    position: relative;
-    padding-left: 37px;
-    padding-right: 16px; }
-    .btn.download-btn i {
-      display: block;
-      position: absolute;
-      left: 14px;
-      padding-top: 7px; }
+    padding: 5px 15px;
+    font-size: 15px; }
+
+.input,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #d3d3d3;
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  height: 40px;
+  letter-spacing: 0.03em;
+  line-height: 22px;
+  padding: 8px 12px;
+  width: 100%;
+  margin: 0 0 10px 0; }
 
 .header__top__container {
   background: #214975;
@@ -1051,5 +1060,90 @@ em, i {
         top: 2px; } }
     .footer .social-links a {
       color: #fff; }
+
+.program-login {
+  padding: 50px 0; }
+  @media only screen and (min-width: 768px) {
+    .program-login {
+      min-height: 800px; } }
+  .program-login .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 698px;
+    padding-left: 16px;
+    padding-right: 16px; }
+  .program-login label {
+    color: #464646;
+    display: block;
+    float: none;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+    letter-spacing: 0.03em;
+    font-size: 15px;
+    line-height: 24px; }
+    @media only screen and (min-width: 768px) {
+      .program-login label {
+        font-size: 17px;
+        line-height: 28px; } }
+  .program-login .box {
+    border: 2px solid #d7d7d7;
+    overflow: hidden;
+    position: relative;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
+    .program-login .box .content {
+      padding: 30px 15px; }
+      @media only screen and (min-width: 768px) {
+        .program-login .box .content {
+          padding: 60px 78px 70px 78px; } }
+      .program-login .box .content h2 {
+        text-align: center; }
+    .program-login .box .copy {
+      margin: 10px 0 25px 0; }
+      @media only screen and (min-width: 768px) {
+        .program-login .box .copy {
+          margin: 10px 0 45px 0; } }
+      .program-login .box .copy p {
+        text-align: center;
+        color: #464646;
+        opacity: 0.5;
+        font-size: 16px;
+        letter-spacing: 0.03em; }
+        @media only screen and (min-width: 768px) {
+          .program-login .box .copy p {
+            font-size: 18px; } }
+  .program-login .box-footer {
+    padding: 30px;
+    background-color: #f3f5f8;
+    color: #214975;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px; }
+    @media only screen and (min-width: 768px) {
+      .program-login .box-footer {
+        font-size: 17px;
+        line-height: 28px; } }
+    .program-login .box-footer a {
+      color: #214975;
+      text-decoration: underline; }
+      .program-login .box-footer a:hover {
+        text-decoration: none; }
+  @media only screen and (min-width: 768px) {
+    .program-login .login-form .input {
+      width: 325px;
+      float: left;
+      margin: 0; } }
+  .program-login .login-form .btn {
+    display: table;
+    margin: 0 auto; }
+    @media only screen and (min-width: 768px) {
+      .program-login .login-form .btn {
+        float: right; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,88 @@
+.program-login{
+	padding:50px 0;
+    @include screen(tablet) {
+		min-height: 800px;
+    }
+	.container {
+	    margin-left: auto;
+	    margin-right: auto;
+	    max-width: 698px;
+	    padding-left: 16px;
+	    padding-right: 16px;
+	}
+	label {
+	    color:$gray;
+	    display: block;
+	    float: none;
+	    font-family: $pt-sans;
+	    font-weight: 600;
+	    margin-bottom: 5px;
+	    margin-left: 0;
+	    padding: 0;
+	    text-align: left;
+	    letter-spacing: 0.03em;
+	    @include paragraph();
+	}
+	.box {
+	    border: 2px solid #d7d7d7;
+	   	overflow: hidden;
+	    position: relative;
+	    @include border-radius(10px);
+	    .content{
+	    	padding:30px 15px;
+	    	@include screen(tablet) {
+				padding:60px 78px 70px 78px;
+	    	}
+	    	h2{
+	    		text-align: center;
+	    	}
+	    }
+	    .copy{
+	    	margin:10px 0 25px 0;
+	    	@include screen(tablet) {
+	    		margin:10px 0 45px 0;	
+	    	}
+	    	p{
+	    		text-align:center;
+	    		color:$gray;
+	    		opacity:0.5;
+	    		font-size:16px;
+	    		letter-spacing: 0.03em;
+	    		@include screen(tablet) {
+	    			font-size:18px;
+	    		}
+
+	    	}
+	    }
+	}
+	.box-footer {
+		padding:30px;
+	    background-color: #f3f5f8;
+	    color:$blue;
+	    text-align: center;
+	    @include paragraph();
+	    a{
+	    	color:$blue;
+	    	text-decoration:underline;
+	    	&:hover{
+	    		text-decoration:none;
+	    	}
+	    }
+	}
+	.login-form{
+		.input{
+			@include screen(tablet) {
+				width:325px;
+				float:left;
+				margin:0;
+			}	
+		}
+		.btn{
+			display:table;
+			margin:0 auto;
+			@include screen(tablet) {
+				float:right
+			}
+		}
+	}	
+} 

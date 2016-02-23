@@ -58,3 +58,17 @@ em , i{
     display: none;
   }
 }
+.error{
+  color:$red;
+  font-size:13px;
+  padding:10px 0;
+  clear:both;
+  @include screen(tablet) {
+      font-size:15px;
+  }
+}
+.errorinput{
+  color:$red !important;
+  border-color:$red !important;
+}
+

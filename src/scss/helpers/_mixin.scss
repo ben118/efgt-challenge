@@ -96,11 +96,10 @@
 }
 
 @mixin paragraph(){
-    font-family:15px;
+    font-size:15px;
     line-height:24px;
-    letter-spacing: 0.04em;
-    @include screen(tablet-l) {
-        font-family:17px;
+    @include screen(tablet) {
+        font-size:17px;
         line-height:28px;
     }
 }
