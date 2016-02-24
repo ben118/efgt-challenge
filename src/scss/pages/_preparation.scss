@@ -819,11 +819,8 @@
 					width: 100%;
 					overflow: hidden;
 				}
-				.btn{
-					min-width:inherit;
-					background:none;
-				}
 				&:hover{
+					background:#fafafa;
 					.btn{
 						@include border-radius(20px);
 						width: 123px;
@@ -861,6 +858,7 @@
 					}
 				}
 				.btn{
+					min-width:inherit;
 					position: absolute;
 					top: 7px;
 					right: 17px;
