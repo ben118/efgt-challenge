@@ -886,13 +886,14 @@ em, i {
   .drh_lesson .transbtn.btn, .drh_lesson .transbtn.save-note, .btn.transbtn {
     background: none;
     color: #8cbd2f; }
-    .drh_lesson .transbtn.btn:hover, .drh_lesson .transbtn.save-note:hover, .drh_lesson .transbtn.btn:focus, .drh_lesson .transbtn.save-note:focus, .drh_lesson .transbtn.btn:active, .drh_lesson .transbtn.save-note:active, .drh_lesson .transbtn.btn:link, .drh_lesson .transbtn.save-note:link, .btn.transbtn:hover, .btn.transbtn:focus, .btn.transbtn:active, .btn.transbtn:link {
+    .drh_lesson .transbtn.btn:hover, .drh_lesson .transbtn.save-note:hover, .btn.transbtn:hover {
       background: #8cbd2f;
       color: #fff; }
   .drh_lesson .transbtn-secondary.btn, .drh_lesson .transbtn-secondary.save-note, .btn.transbtn-secondary {
     background: none;
-    color: #214975; }
-    .drh_lesson .transbtn-secondary.btn:hover, .drh_lesson .transbtn-secondary.save-note:hover, .drh_lesson .transbtn-secondary.btn:focus, .drh_lesson .transbtn-secondary.save-note:focus, .drh_lesson .transbtn-secondary.btn:active, .drh_lesson .transbtn-secondary.save-note:active, .drh_lesson .transbtn-secondary.btn:link, .drh_lesson .transbtn-secondary.save-note:link, .btn.transbtn-secondary:hover, .btn.transbtn-secondary:focus, .btn.transbtn-secondary:active, .btn.transbtn-secondary:link {
+    color: #214975;
+    border-color: #214975; }
+    .drh_lesson .transbtn-secondary.btn:hover, .drh_lesson .transbtn-secondary.save-note:hover, .btn.transbtn-secondary:hover {
       background: #214975;
       color: #fff; }
   .drh_lesson .medium.btn, .drh_lesson .medium.save-note, .btn.medium {
@@ -2028,24 +2029,25 @@ input[type="password"] {
           height: 48px;
           width: 100%;
           overflow: hidden; } }
-      .drh_lesson_downloads-list li:hover {
-        background-color: #fafafa; }
-        .drh_lesson_downloads-list li:hover .btn {
-          -webkit-border-radius: 20px;
-          border-radius: 20px;
-          background-clip: padding-box;
-          /* stops bg color from leaking outside the border: */
-          width: 123px;
-          padding-left: 15px; }
+      .drh_lesson_downloads-list li .btn {
+        min-width: inherit;
+        background: none; }
+      .drh_lesson_downloads-list li:hover .btn {
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        width: 123px;
+        padding-left: 15px; }
+        @media only screen and (max-width: 767px) {
+          .drh_lesson_downloads-list li:hover .btn {
+            width: 23px;
+            padding: 0 3px; } }
+        .drh_lesson_downloads-list li:hover .btn .menuicon-downloads {
+          margin-right: 6px; }
           @media only screen and (max-width: 767px) {
-            .drh_lesson_downloads-list li:hover .btn {
-              width: 23px;
-              padding: 0 3px; } }
-          .drh_lesson_downloads-list li:hover .btn .menuicon-downloads {
-            margin-right: 6px; }
-            @media only screen and (max-width: 767px) {
-              .drh_lesson_downloads-list li:hover .btn .menuicon-downloads {
-                margin: 0; } }
+            .drh_lesson_downloads-list li:hover .btn .menuicon-downloads {
+              margin: 0; } }
       .drh_lesson_downloads-list li .file-name {
         font-size: 16px;
         line-height: 18px;

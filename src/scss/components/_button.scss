@@ -34,7 +34,7 @@
 	&.transbtn{
 		background:none;
 		color:$green;
-		&:hover, &:focus , &:active, &:link{
+		&:hover{
 			background:$green;
 			color:$white;
 		}
@@ -42,7 +42,8 @@
 	&.transbtn-secondary{
 		background:none;
 		color:$blue;
-		&:hover, &:focus , &:active, &:link{
+		border-color:$blue;
+		&:hover{
 			background:$blue;
 			color:$white;
 		}
