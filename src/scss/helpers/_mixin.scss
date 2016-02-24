@@ -54,7 +54,7 @@
         }
     }
     @else if $media == mobile-max {
-        @media only screen and (max-width: $mobile-l) {
+        @media only screen and (max-width: $mobile-max) {
             @content;
         }
     }
@@ -74,7 +74,7 @@
         }
     }
     @else if $media == tablet-max {
-        @media only screen and (max-width: $tablet) {
+        @media only screen and (max-width: $tablet-l) {
             @content;
         }
     }

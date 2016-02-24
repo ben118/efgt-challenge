@@ -72,3 +72,197 @@ em , i{
   border-color:$red !important;
 }
 
+%default-copy, .default-copy{
+  font-size: 17px;
+  line-height: 28px;
+  font-family: 'PT Serif', serif;
+  color: $gray; 
+  letter-spacing: 0.028em;
+
+  @include screen(mobile-max) {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  strong {
+    font-weight: 700;
+
+    em {
+      font-weight: 700;
+    }
+  }
+  em {
+    strong {
+      font-weight: 700;
+    }
+  }
+  p {
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    font-family: 'PT Serif', serif;
+    margin-bottom: 30px;
+
+    @include screen(mobile-max) {
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+  }
+  ul, ol {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: left;
+    @include screen(mobile-max) {
+      margin-bottom: 25px;
+    }
+  }
+  li {
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Serif', serif;
+    position: relative;
+    margin-bottom: 8px;
+
+    @include screen(mobile-max) {
+      font-size: 15px;
+      line-height: 21px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul {
+    li {
+      padding-left: 18px;
+
+      @include screen(mobile-max) {
+        padding-left: 14px;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        background-color: $blue;
+        @include border-radius(50%);
+        height: 6px;
+        width: 6px;
+        position: absolute;
+        left: 1px;
+        top: 12px;
+
+        @include screen(mobile-max) {
+          height: 4px;
+          width: 4px;
+          left: 3px;
+          top: 8px;
+        }
+      }
+    }
+  }
+  ol {
+    counter-reset: item;
+
+    li {
+      position: relative;
+      padding-left: 25px;
+
+      @include screen(mobile-max) {
+        padding-left: 20px;
+      }
+      &:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        color: $blue;
+        position: absolute;
+        left: 3px;
+        top: 0;
+        font-weight: 600;
+        @include screen(mobile-max) {
+          left: 3px;
+          top: 1px;
+          font-size: 13px;
+        }
+      }
+      &:nth-child(n+10) {
+        padding-left: 35px;
+
+        @include screen(mobile-max) {
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+  blockquote{
+    p{
+      font-style: italic;
+    }
+  }
+  h1{
+    font-size: 42px;
+    line-height: 56px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    @include screen(mobile-max) {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+  h2{
+    font-size: 32px;
+    line-height: 40px;
+    font-family: $pt-sans;
+    font-weight: 400;
+    @include screen(mobile-max) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: $pt-sans;
+    font-weight: 600;
+    @include screen(mobile-max) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  h4{
+    font-size: 22px;
+    line-height: 28px;
+    font-family: $pt-sans;
+    font-weight: 400;
+    @include screen(mobile-max) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  h5{
+    font-size: 18px;
+    line-height: 28px;
+    font-family: $pt-sans;
+    font-weight: 600;
+    @include screen(mobile-max) {
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+  h6{
+    font-size: 13px;
+    line-height: 16px;
+    font-family: $pt-sans;
+    font-weight: 400;
+    @include screen(mobile-max) {
+      font-size: 12px;
+    }
+  }
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+

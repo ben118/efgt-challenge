@@ -1,0 +1,2275 @@
+.drh_lesson{
+	font-family: $pt-sans;
+	color: $gray;
+	padding-top: 43px;
+	min-height: 800px;
+	.container{
+		margin: 0 auto;
+		padding:0;
+		max-width: 810px;
+		@include screen(tablet-max) {
+			max-width: 608px;
+		}
+		@include screen(mobile-max) {
+			padding: 0 20px;
+		}
+	}
+	.row{
+		@include clearfix();
+		margin-left: -6px;
+		margin-right: -6px;
+		@include screen(mobile-max) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+		.col{
+			float: left;
+			padding-left: 6px;
+			padding-right: 6px;
+			@include screen(mobile-max) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	.col-two{
+		.col{
+			width: 50%;
+			@include screen(mobile-max) {
+				width: 100%;
+			}
+		}
+	}
+	.tabs{
+		.tab-nav{
+			a{
+				font-size: 17px;
+				font-family: $pt-sans;
+				font-weight: 400;
+				@include screen(mobile-max) {
+					font-size: 16px;
+				}
+			}
+		}
+		.tab-container{
+			.tab-item{
+				display: none;
+				&.is-open{
+					display: block;
+				}
+			}
+		}
+	}
+	&_main-content{
+		min-height: 600px;
+		padding:0 0 100px 0;
+		@include screen(tablet) {
+
+		}
+	}
+	.default-box{
+		p{
+			margin-bottom: 16px;
+		}
+	}
+	.background-icon{
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+		width: 33px;
+		height: 33px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		margin-top: -5px;
+	}
+	.menuicon-calendar{
+		font-size: 28px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -5px;
+		margin-right: 6px;
+	}
+	&-title{
+		font-family: $pt-sans;
+		color: $gray;
+		font-size: 13px;
+		font-weight: 700;
+		letter-spacing: 0.09em;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 11px;
+		&-sub{
+			font-family: $pt-sans;
+			font-size: 32px;
+			font-weight: 400;
+			line-height: 40px;
+			color: $gray;
+			text-align: center;
+			margin-bottom: 39px;
+			@include screen(mobile-max) {
+				font-size: 26px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&-nav{
+		@include clearfix();
+		
+		position: relative;
+		.drh_lesson-title-sub{
+			color: $green;
+		}
+		.prev-page, .next-page{
+			@include border-radius(50%);
+			height: 24px;
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -33px;
+			text-align: center;
+			color: #d0d0d0;
+			@include screen(mobile-max) {
+				margin-top: -25px;
+			}
+			.day-text{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 16px;
+				line-height: 20px;
+				max-width: 190px;
+				text-align: right;
+				color: #464646;
+				@include transition(all .3s ease-in-out);
+				@include screen(mobile-max) {
+					display: none;
+				}
+			}
+			i{
+				font-size: 30px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			&:hover{
+				text-decoration: none;
+				i{
+					color: $blue;
+				}
+			}
+			&.no-access{
+				cursor: no-drop;
+				opacity: .5;
+				&:hover{
+					i{
+						color: #d0d0d0;
+					}
+				}
+			}
+		}
+		.prev-page{
+			left: -3px;
+			.day-text{
+				padding-left: 6px;
+				text-align: left;
+			}
+		}
+		.next-page{
+			right: -3px;
+			.day-text{
+				padding-right: 6px;
+			}
+		}
+	}
+	&_video{
+		border: 2px solid #ececec;
+		margin-bottom: 56px;
+		@include screen(mobile-max) {
+			margin-bottom: 24px;
+		}
+		&.video-single{
+			max-width: 615px;
+			margin-left: auto;
+			margin-right: auto;
+			.drh_lesson_video-tab-container{
+				padding-top: 0;
+				float: none;
+			}
+		}
+		&-single{
+			max-width: 603px;
+			margin: 0 auto 56px;
+			padding: 10px;
+			@include screen(mobile-max) {
+				margin-bottom: 24px;
+			}
+			.drh_lesson_video-tab-container{
+				float: none;
+				margin: 0 auto;	
+				height: auto;
+				width: auto;
+			}
+		}
+		&-title{
+			font-family: $pt-sans;
+			font-size: 14px;
+			line-height: 37px;
+			color: $gray;
+			border-bottom: 1px solid #ececec;
+			display: block;
+			padding-left: 12px;
+			font-weight: 400;
+			margin:0;
+			@include screen(mobile-max) {
+				display: none;
+			}
+			i{
+				font-size: 18px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 4px;
+				color: #898989;
+				margin-top: -3px;
+			}
+		}
+		&-item{
+			width: 100%;
+			// height: 344px;
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9 */
+			// padding-top: 25px;
+			height: 0;
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			@include screen(tablet-max) {
+				height: 336px;
+			}
+			@include screen(mobile-max) {
+				height: auto;
+			}
+			iframe{
+				height: 100%;
+				width: 100%;
+			}
+		}
+		&-tab{
+			@include clearfix();
+			&-container{
+				float: right;
+				width: 611px;
+				height: 344px;
+				overflow: hidden;
+				@include screen(tablet-max) {
+					width: 100%;
+					height: 336px;
+				}
+				@include screen(mobile-max) {
+					width: 100%;
+					height: auto;
+				}
+			}
+			&-nav{
+				float: left;
+				width: 195px;
+				height: 344px;
+				background-color: #fafafa;
+				padding-top: 0px;
+				overflow-y: auto;
+				@include screen(tablet-max) {
+					width: 100%;
+					height: auto;
+				}
+				a:link, a:visited{
+					color: $gray;	
+				}
+				&.tab-nav{
+					li{
+						a{
+							font-size: 15px !important;
+						}
+					}
+				}
+				a{
+					color: $gray;
+					display: block;
+					padding: 15px 25px 15px 14px;
+					display: block;
+					position: relative;
+					&:after{
+						content: "\e605";
+						display: block;
+						position: absolute;
+						top: 16px;
+						right: 7px;
+						font-family: 'icomoon';
+						speak: none;
+						font-style: normal;
+						font-weight: normal;
+						font-variant: normal;
+						text-transform: none;
+						line-height: 1;
+						color: #cccccc;
+						font-size: 18px;
+					}
+					&:hover{
+						text-decoration: none;
+						background-color: #f3f3f3;
+						&:after{
+							color: $gray;
+						}
+					}
+				}
+				li{
+					display: block;
+					@include screen(tablet-max) {
+						border-bottom: 1px solid #eeeeee;
+					}
+					&:last-child{
+						border-bottom: 0;
+					}
+
+					
+
+					&.is-open{
+						a{
+							color: $blue;
+							&:after{
+								color: $blue;
+							}
+						}
+					}
+					&.in-play{ 
+						a{
+							&:after{
+								content: "\e60e";
+							}
+						}
+					}
+					&.watched{ 
+						a{
+							color: $blue;
+							&:after{
+								content: "\e60d";
+								color: $blue;
+							}
+							&:hover{
+								&:after{
+									color: $gray;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&_overview{
+		padding-bottom: 29px;
+		margin-bottom: 41px;
+		@include screen(mobile-max) {
+			margin-bottom: 31px;
+		}
+		&-tab{
+			max-width: 634px;
+			margin: 0 auto;
+			font-size: 17px;
+			line-height: 28px;
+			font-family: 'PT Serif', serif;
+			letter-spacing: 0.03em;
+			@include screen(tablet-max) {
+				max-width: inherit;
+			}
+			@include screen(mobile-max) {
+				font-size: 16px;
+				line-height: 24px;
+			}
+			p{
+				font-size: 17px;
+				line-height: 28px;	
+				font-family: 'PT Serif', serif;
+				letter-spacing: 0.03em;
+				margin-bottom: 16px;
+				@include screen(mobile-max) {
+					font-size: 15px;
+					line-height: 24px;
+				}
+			}
+			h2{
+				font-family: $pt-sans;
+				font-size: 24px;
+				line-height: 28px;
+				font-weight: 800;
+				color: $gray;
+				text-align: center;
+				margin-bottom: 18px;
+				@include screen(mobile-max) {
+					font-size: 21px;
+				}
+			}
+			h3{
+				font-family: $pt-sans;
+				font-size: 18px;
+				font-weight: 700;
+				color: #111;
+				margin-bottom: 23px;
+			}
+
+			&-nav{
+				font-size: 0;
+				text-align: center;
+				max-width: 496px;
+				margin: 0 auto 50px;
+				border: 1px solid $blue;
+				@include border-radius(20px);
+				overflow: hidden;
+				@include screen(mobile-max) {
+					margin-bottom: 20px;
+				}
+				ul{
+					display: table;
+					width: 100%;
+				}
+				li{
+					display: table-cell;
+					vertical-align: middle;
+					border-right: 1px solid $blue;
+					width: 33.33%;
+					@include transition(background-color .5s ease-in-out);
+					&:last-child{
+						border: 0;
+					}
+					a{
+						color: $blue;
+						line-height: 36px;
+						padding-top: 2px;
+						display: block;
+						@include transition(color .5s ease-in-out);
+						@include screen(tablet-max) {
+							padding-top: 0; 
+						}
+						@include screen(mobile-max) {
+							font-size: 15px;
+						}
+						i{
+							vertical-align: middle;
+							display: inline-block;
+							margin-right: 2px;
+							margin-top: -5px;
+							@include screen(mobile-max) {
+								display: none;
+							}
+							&.menuicon-journal{
+								font-size: 21px;
+							}
+							&.menuicon-downloads{
+								font-size: 19px;
+							}
+						}
+						&:hover{
+							text-decoration: none;
+						}
+					}
+					&.is-open, &:hover{
+						background-color: $blue;
+						a{
+							color: $white;
+						}
+					}
+				}
+			}
+			.default-copy{
+				h2{
+					text-align:left;
+					padding-top:20px;
+				}
+			}
+		}
+		&-item{
+			padding: 0 16px;
+			@include screen(tablet-max) {
+				padding: 0;
+			}
+		}
+	}
+	&_checklist{
+		@include clearfix();
+		margin-bottom: 25px;
+		@include screen(mobile-max) {
+			margin-bottom: 5px;
+		}
+		h2{
+			margin-bottom: 27px;
+		}
+		&-tab{
+			&.tabs{
+				.tab-nav a{
+					font-size: 13px;
+					font-weight: 700;
+					@include screen(mobile-max) {
+						font-size: 11px;
+					}
+				}
+			}
+			&-nav{
+				font-size: 0;
+				text-align: center;
+				max-width: 400px;
+				margin: 0 auto 38px;
+				border: 1px solid $blue;
+				@include border-radius(20px);
+				overflow: hidden;
+				ul{
+					display: table;
+					width: 100%;
+				}
+				li{
+					display: table-cell;
+					vertical-align: middle;
+					border-right: 1px solid $blue;
+					width: 50%;
+					@include transition(background-color .5s ease-in-out);
+					&:last-child{
+						border: 0;
+					}
+					a{
+						@include transition(color .5s ease-in-out);
+						color: $blue;
+						line-height: 29px;
+						display: block;
+						text-transform: uppercase;
+						height: 29px;
+						letter-spacing: 0.08em;
+						padding-top: 1px;
+						i{
+							vertical-align: middle;
+						}
+						&:hover{
+							text-decoration: none;
+						}
+					}
+					&.is-open, &:hover{
+						background-color: $blue;
+						a{
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		&-item{
+			margin-bottom: 47px;
+
+			li{
+				position: relative;
+				display: block;
+				color: #111111;
+				cursor: pointer;
+				padding-left: 27px;
+				margin-bottom: 8px;
+				letter-spacing: 0.03em;
+				@include transition(color .5s ease-in-out);
+				@include screen(mobile-max) {
+					font-size: 15px;
+					line-height: 21px;
+				}
+				&:before, &:after{
+					@include border-radius(50%);
+					@include transition(background-color .5s ease-in-out);
+					content: '';
+					display: block;
+					position: absolute;
+				}
+				&:before{
+					width: 15px;
+					height: 15px;
+					background-color: $white;
+					border: 1px solid #111111;
+					left: 3px;
+					top: 7px;
+					@include screen(mobile-max) {
+						top: 2px;
+					}
+				}
+				&:after{
+					height: 9px;
+					width: 9px;
+					left: 6px;
+					top: 10px;
+					background-color: $white;
+					@include screen(mobile-max) {
+						top: 5px;
+					}
+				}
+				&:hover, &.checked{
+					color: #898989;
+					&:after{
+						background-color: $blue;
+					}
+				}
+				&.checked{
+					text-decoration: line-through;
+				}
+			}
+		}
+
+	}
+	
+	&_tips{
+		margin: 0 -16px 64px;
+		@include clearfix();
+		@include screen(mobile-max) {
+			margin: 0 0 64px;
+		}
+		&-box{
+			background-color: #fdfefe;
+			border: 2px solid #e7f4f6;
+			@include border-radius(8px);
+			padding: 32px;
+			font-family: $pt-sans;
+			color: $blue;
+			@include screen(mobile-max) {
+				padding: 12px 10px;
+			}
+			h2{
+				text-align: left;
+				color: $blue;
+				font-size: 21px;
+				margin-bottom: 12px;
+			}
+			.default-box{
+				color: $blue;
+				font-family: $pt-sans;
+				p{
+					color: $blue;
+					font-family: $pt-sans;
+					margin-bottom: 10px;
+				}
+				li{
+					color: $blue;
+					font-family: $pt-sans;
+				}
+				a{
+					text-decoration: underline;
+				}
+				h1,h2,h3,h4,h5,h6{
+					color: $blue;
+				}
+			}
+		}
+	}
+	&_advice{
+		@include clearfix();
+		border-bottom: 1px solid #efefef;
+		padding-bottom: 113px;
+		margin-bottom: 62px;
+		position: relative;
+		@include screen(mobile-max) {
+			padding-bottom: 67px;
+			margin-bottom: 42px;
+		}
+		&-box{
+			max-width: 398px;
+			text-align: center;
+			margin: 0 auto;
+			color: #111;
+			p{
+				color: #111;	
+				margin: 0;
+			}
+			a{
+				font-style: italic;
+			}
+			.item{
+				padding: 16px 0 ;
+			}
+			blockquote{
+				padding: 0;
+				margin: 0;
+				color: #111;
+				p{
+					color: #111;
+					margin: 0;
+				}	
+				a{
+					font-style: italic;
+				}
+			}
+		}
+		.slides{
+			overflow: hidden;
+			zoom: 1;
+		}
+		.slides .item{
+			background-color: $white;
+			display: none;
+			// min-height: 230px;
+		}
+		.flex-control-nav{
+			left: 0;
+			bottom: 65px;
+			@include screen(mobile-max) {
+				bottom: 25px;
+			}
+		}
+		.flex-control-paging li a{
+			height: 14px;
+			width: 14px;
+			border: 1px solid #cccccc;
+			box-shadow: none;
+			&:hover{
+				background-color: #cccccc;
+			}
+			&.flex-active{
+				background-color: #cccccc;
+			}
+		}
+	}
+	&_food{
+		.media{
+			@include clearfix();
+			padding: 22px 0 36px 15px;
+			@include screen(mobile-max) {
+				padding-bottom: 20px;
+			}
+			.media-image{
+				float: left;
+				width: 143px;
+				height: 143px;
+				overflow: hidden;
+				margin-right: 48px;
+				@include border-radius(50%);
+				@include screen(mobile-max) {
+					float: none;
+					margin: 0 auto;
+				}
+				img{
+					width: 143px;
+					@include screen(mobile-max) {
+						display: block;
+						margin: 0 auto 0;
+					}
+				}
+			}
+			.media-copy{
+				color: $blue;
+				font-size: 21px;
+				line-height: 28px;
+				font-family: 'PT Serif', serif;
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				height: 143px;
+				@include screen(mobile-max) {
+					font-size: 18px;
+					line-height: 24px;
+					height: auto;
+					padding-top: 14px;
+				}
+				p{
+					color: $blue;
+					font-size: 21px;
+					line-height: 28px;
+					font-family: 'PT Serif', serif;
+					@include screen(mobile-max) {
+						font-size: 18px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+		.quote-copy{
+			.copy, .author{
+				display: inline;
+				p{
+					display: inline;	
+				}
+			}
+		}
+	}
+	&_downloads{
+		&-item{
+			@include clearfix();
+			overflow: hidden;
+			h2{
+				margin-bottom: 34px;
+			}
+		}
+		&-list{
+			margin: 0 0;
+			padding: 0;
+			border-top: 1px solid #ececec;
+			li{
+				height: 48px;
+				position: relative;
+				padding-right: 144px;
+				display: block;
+				border-bottom: 1px solid #ececec;
+				background-color: #fff;
+				padding-left: 13px;
+				letter-spacing: 0.01em;
+				@include screen(mobile-max) {
+					padding-right: 45px;
+					display: table;
+					height: 48px;
+					width: 100%;
+					overflow: hidden;
+				}
+				&:hover{
+					background-color: #fafafa;
+					.btn{
+						@include border-radius(20px);
+						width: 123px;
+						padding-left: 15px;
+						@include screen(mobile-max) {
+							width: 23px;
+							padding: 0 3px;
+						}
+						.menuicon-downloads{
+							margin-right: 6px;
+							@include screen(mobile-max) {
+								margin:0;
+							}
+						}
+					}
+				}
+				.file-name{
+					font-size: 16px;
+					line-height: 18px;
+					font-family: $pt-sans;
+					color: #464646;
+					vertical-align: top;
+					display: inline-block;
+					position: relative;
+					top: 50%;
+					@include transform(translateY(-50%));
+					padding-top: 2px;
+					@include screen(mobile-max) {
+						 display: table-cell;
+						 vertical-align: middle;
+						top: 0;
+						position: static;
+						@include transform(none);
+						padding: 5px 0;
+					}
+				}
+				.btn{
+					position: absolute;
+					top: 7px;
+					right: 17px;
+					@include border-radius(20px);
+					width: 32px;
+					height: 32px;
+					padding: 0 7px;
+					text-align: left;
+					overflow: hidden;
+					@include screen(tablet-max) {
+						width: 123px;
+						padding-left: 15px;
+					}
+					@include screen(mobile-max) {
+						width: 23px;
+						height: 23px;
+						top: 13px;
+						right: 15px;
+						padding: 0 3px;
+					}
+					.menuicon-downloads{
+						display: inline-block;
+						vertical-align: top;
+						padding-top: 8px;
+						@include screen(tablet-max) {
+							margin-right: 6px;
+						}
+						@include screen(mobile-max) {
+							padding-top: 3px;
+							margin:0;
+						}
+					}
+					span{
+						vertical-align: top;
+						display: inline-block;
+						padding-top: 1px;
+						@include screen(mobile-max) {
+							display: none;
+						}
+					}
+					&:hover{
+						width: 123px;
+						padding-left: 15px;
+						@include screen(mobile-max) {
+							width: 23px;
+							padding: 0 3px;
+						}
+						.menuicon-downloads{
+							margin-right: 6px;
+							@include screen(mobile-max) {
+								margin:0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&_journal{
+		border: 2px solid #f2f1ef;
+		padding: 41px 42px 33px;
+		margin-bottom: 15px;
+		position: relative;
+		@include screen(tablet-max) {
+			padding: 30px 15px;
+		}
+		&-item{
+			margin: 0 -27px;
+			@include screen(mobile-max) {
+				margin: 0;
+			}
+			h2{
+				margin-bottom: 34px;
+			}
+		}
+		h3{
+			font-size: 22px;
+			font-weight: normal;
+			color: #3c3b38;
+			text-align: left;
+			font-family: $pt-sans;
+			letter-spacing: 0.019em;
+			margin-bottom: 24px;
+			@include screen(mobile-max) {
+				font-size: 17px;
+			}
+		}
+	}
+
+	&__tour, &__community, &__resources, &__recipes, &__support , &__facebook , &__efgt{
+		color: $gray;
+		padding-top: 53px;
+		padding-bottom: 180px;
+		@include screen(mobile-max) {
+			padding-bottom: 90px;
+			padding-top: 27px;
+		}
+		.container{
+			max-width: 604px;
+			margin: 0 auto;
+			padding: 0;
+		}
+		h1{
+			font-family: $pt-sans;
+			font-size: 42px;
+			line-height: 40px;
+			font-weight: 400;
+			color: $gray;
+			letter-spacing: 0.019em;
+			margin-bottom: 39px;
+			@include screen(mobile-max) {
+				font-size: 34px;
+				line-height: 40px;
+				margin-bottom: 20px;
+			}
+		}
+		h2{
+			font-size: 24px;
+			line-height: 28px;
+			font-family: $pt-sans;
+			color: $gray;
+			letter-spacing: 0.01em;
+			margin-bottom: 27px;
+			@include screen(mobile-max) {
+				font-size: 20px;
+				line-height: 24px;
+				margin-bottom: 18px;
+			}
+		}
+		p{
+			font-size: 17px;
+			line-height: 28px;
+			font-family: 'PT Serif', serif;
+			color: $gray;
+			letter-spacing: 0.028em;
+			@include screen(mobile-max) {
+				font-size: 15px;
+				line-height: 21px;
+			}
+		}
+		.lesson-page-title{
+			.menuicon-tour{
+				display: block;
+				font-size: 43px;
+				color: $blue;
+				margin-bottom: 20px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		.less-page-header-copy{
+			margin-bottom: 84px;
+			@include screen(mobile-max) {
+				margin-bottom: 42px;
+			}
+		}
+		.drh_lesson__tour-image{
+			// border: 1px solid #efefef;
+			height: 339px;
+			display: block;
+			margin-bottom: 27px;
+			overflow: hidden;
+			@include screen(mobile-max) {
+				height: auto;
+				margin-bottom: 18px;
+			}
+		}
+		.drh_lesson__tour-list{
+			p{
+				font-family: $pt-sans;
+			}
+			.copy{
+				font-family: $pt-sans;
+			}
+		}
+		article{
+			border-bottom: 1px solid #efefef;
+			padding-bottom: 59px;
+			margin-bottom: 52px;
+			@include screen(mobile-max) {
+				padding-bottom: 30px;
+				margin-bottom: 31px;
+			}
+			&:last-child{
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	&__community{
+		padding-bottom: 132px;
+		@include screen(mobile-max) {
+			padding-bottom: 90px;
+		}
+		h2{
+			margin-bottom: 55px;
+			@include screen(mobile-max) {
+				margin-bottom: 40px;
+			}
+		}
+		.less-page-header-copy{
+			margin-bottom: 42px;
+		}
+		.drh_lesson__tour-image{
+			margin-bottom: 52px;
+			border: 0;
+			@include screen(mobile-max) {
+				margin-bottom: 32px;
+			}
+		}
+		.lesson-page-title{
+			.menuicon-community{
+				display: block;
+				font-size: 43px;
+				color: $blue;
+				margin-bottom: 20px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		.btn-area-top{
+			border-bottom: 1px solid #efefef;
+			padding-bottom: 56px;
+			margin-bottom: 49px;
+			@include screen(mobile-max) {
+				padding-bottom: 30px;
+				margin-bottom: 31px;
+			}
+			.btn{
+				max-width: 210px;
+				padding: 0;
+				width: 100%;
+			}
+		}
+		article{
+			border-bottom: 0;
+			padding-bottom: 0;
+			.copy{
+				margin-bottom: 67px;
+				@include screen(mobile-max) {
+					margin-bottom: 47px;
+				}
+			}
+		}
+		.bottom-box{
+			background-color: #f3f5f4;
+			font-size: 22px;
+			line-height: normal;
+			padding-top: 33px;
+			padding-bottom: 42px;
+			@include screen(mobile-max) {
+				padding: 13px 56px;
+				font-size: 15px;
+			}
+			a{
+				text-decoration: underline;
+			}
+		}
+	}
+	&__tour{
+		.container{
+			max-width: 810px;
+			@include screen(tablet-max) {
+				max-width: 608px;
+			}
+			@include screen(mobile-max) {
+				padding: 0;
+			}
+		}
+		.small-cnt{
+			&.has-border{
+				border-top: 1px solid #efefef;
+				padding-top: 54px;
+				@include screen(mobile-max) {
+					padding-top: 20px;
+				}
+			}
+			.cnt{
+				max-width: 604px;
+				margin: 0 auto;
+				padding: 0;
+			}
+		}
+		.less-page-header-copy{
+			margin-bottom: 56px;
+			@include screen(mobile-max) {
+				margin-bottom: 30px;
+			}
+			p{
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&__resources{
+		.less-page-header-copy{
+			max-width: 604px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 67px;
+			@include screen(mobile-max) {
+				margin-bottom: 40px;
+			}
+		}
+		.container{
+			max-width: 810px;
+			@include screen(tablet-max) {
+				max-width: 608px;
+			}
+			@include screen(mobile-max) {
+				padding: 0;
+			}
+		}
+		h2{
+			margin-bottom: 35px;
+			@include screen(mobile-max) {
+				margin-bottom: 25px;
+			}
+		}
+		.col-two .col{
+			min-height: 215px;
+			width: 49.91%;
+			margin-bottom: 20px;
+			@include screen(mobile-max) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		.flex-box{
+			-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		    flex-direction: row;
+		    
+		    -webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		    
+		    -webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+
+	        
+	        -webkit-align-items: center;
+	        -ms-flex-align: center;
+	        align-items: center;
+	        @include screen(mobile-max) {
+	        	-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+	        	flex-wrap: wrap;
+	        }
+			.box{
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flexbox;
+				display: flex;
+				
+			}
+		}
+		.lesson-page-title{
+			.menuicon-downloads{
+				display: block;
+				font-size: 46px;
+				color: $blue;
+				margin-bottom: 18px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		.resources-box{
+			@include clearfix();
+			margin-bottom: 67px;
+			@include screen(mobile-max) {
+				margin-bottom: 25px;
+			}
+			&.box-1{
+				.col-two .col{
+					max-width: 410px;
+					width: 100%;
+					margin: 0 auto;
+					float: none;
+					@include screen(mobile-max) {
+						max-width: 100%;
+					}
+				}
+			}
+
+			&.box-3{
+				margin: 0 -50px 67px;
+				@include screen(mobile-max) {
+					margin: 0 0 25px;
+				}
+				.col-two .col{
+					width: 33.33%;
+					@include screen(mobile-max) {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.box{
+			border: 2px solid #f3f5f4;
+			@include border-radius(5px);
+			width: 100%;
+			text-align: center;
+			font-family: $pt-sans;
+			h4{
+				font-family: $pt-sans;
+				font-size: 22px;
+				font-weight: normal;
+				margin-bottom: 15px;
+			}
+			p{
+				font-family: $pt-sans;
+			}
+			.copy{
+				padding: 10px 20px;
+				width: 100%;
+			}
+			.text{
+				font-family: $pt-sans;
+				margin-bottom: 19px;
+				p{
+					font-family: $pt-sans;
+				}
+			}
+			h6{
+				font-family: $pt-sans;
+				font-size: 14px;
+				font-weight: 600;
+				margin-bottom: 5px;
+			}
+		}
+		.box-option{
+			overflow:hidden;
+			.box-media{
+				text-align:center;
+				width:49%;
+				display:inline-block;
+				margin:0 auto;
+				@include screen(tablet-max) {
+					width:100%;
+					float:none;
+					margin:0 0 20px 0;
+				}	
+			}
+		}
+	}
+	&__recipes, &__support , &__efgt{
+		.btn-area-top{
+			margin-bottom: 103px;
+		}
+		
+		.less-page-header-copy{
+			max-width: 604px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 41px;
+			@include screen(mobile-max) {
+				margin-bottom: 20px;
+			}
+		}
+		.copy-section{
+			max-width: 604px;
+			margin-left: auto;
+			margin-right: auto;	
+			h2{
+				margin-bottom: 14px;
+			}
+			.copy{
+				font-family: $pt-sans;
+				margin-bottom: 39px;
+				p{
+					font-family: $pt-sans;	
+				}
+			}
+			.btn{
+				width: 190px;
+				padding: 0;
+			}
+		}
+		.container{
+			max-width: 810px;
+			@include screen(tablet-max) {
+				max-width: 608px;
+			}
+			@include screen(mobile-max) {
+				padding: 0;
+			}
+		}
+		.lesson-page-title{
+			.menuicon-recipes{
+				display: block;
+				font-size: 39px;
+				color: $blue;
+				margin-bottom: 24px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 15px;
+				}
+			}
+			.menuicon-bulb{
+				display: block;
+				font-size: 50px;
+				color: $blue;
+				margin-bottom: 17px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 6px;
+				}
+			}
+		}
+		h2{
+			margin-bottom: 35px;
+			@include screen(mobile-max) {
+				margin-bottom: 25px;
+			}
+		}
+		.btn-area-top{
+			margin-bottom: 67px;
+			@include screen(mobile-max) {
+				padding-bottom: 30px;
+				margin-bottom: 31px;
+			}
+			.btn{
+				max-width: 210px;
+				padding: 0;
+				width: 100%;
+			}
+		}
+		.drh_lesson_video{
+			margin-bottom: 45px;
+		}
+	}
+	&__support{
+		.lesson-page-title{
+			.menuicon-support , .menuicon-calendar , 
+			.menuicon-downloads , .menuicon-phone-alt,
+			.menuicon-bulb{
+				display: block;
+				font-size: 50px;
+				color: $blue;
+				margin-bottom: 17px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 6px;
+				}
+			}
+		}
+		.faq-list{
+			max-width: 632px;
+			margin: 0 auto 95px;
+			@include screen(mobile-max) {
+				margin-bottom: 50px;
+			}
+			dl{
+				margin: 0; padding: 0;
+				dt{
+					border-bottom: 1px solid #efefef;
+					cursor: pointer;
+					color: $blue;
+					font-size: 18px;
+					line-height: 25px;
+					font-family: $pt-sans;
+					position: relative;
+					display: block;
+					font-weight: 700;
+					letter-spacing: 0.02em;
+					padding: 12px 37px 10px 18px;
+					@include screen(mobile-max) {
+						font-size: 15px;
+						line-height: 21px;
+					}
+					&:first-child{
+						border-top: 1px solid #efefef;
+					}
+					&:after{
+						font-family: 'icomoon';
+						content: "\e60c";
+						display: block;
+						position: absolute;
+						right: 10px;
+						top: 10px;
+						font-weight: 500;
+						@include transform(rotate(90deg));
+						@include transition(all .4s ease-in-out);
+						font-size: 23px;
+					}
+					&:hover{
+						background-color: #fafafa;
+					}
+					&.is-open{
+						&:after{
+							@include transform(rotate(-90deg));
+						}
+					}
+				}
+				dd{
+					padding: 0;
+					margin: 0;
+					opacity: 0;
+					max-height: 0;
+					overflow: hidden;
+					height: auto;
+					@include transition(max-height 0.4s ease-out, opacity .7s ease-out);
+					&.is-open{
+						max-height: 10000px;
+						opacity: 1;
+						@include transition(max-height 0.6s ease-in, opacity .4s ease-in);
+					}
+					@include screen(mobile-max) {
+						font-size: 15px;
+						line-height: 21px;
+						padding: 0;
+					}
+					.copy{
+						padding: 19px;
+						font-family: $pt-sans;
+						border-bottom: 1px solid #efefef;
+						p, li{
+							font-family: $pt-sans;
+						}
+					}
+				}
+			}
+		}
+		.lesson-contactus{
+			max-width: 600px;
+			margin: 0 auto;
+			.gform_wrapper{
+				margin: 0;
+				padding: 0;
+				max-width: 100%;
+				.gform_heading{
+					margin: 0;
+					padding: 0;
+					max-width: 100%;
+					width: 100%;
+				}
+				.validation_error{
+					padding: 0;
+				    width: 100%;
+				    border: 0;
+				    font-size: 15px;
+				    line-height: 23px;
+				    font-weight: normal;
+				    color: $blue;
+				    font-family: $pt-sans;
+				}
+				form li, li{
+					margin: 0;
+					padding: 0;
+				}
+				label{
+					display: block !important; 
+					font-size: 17px !important;
+					font-family: $pt-sans !important;
+					font-weight: 700 !important;
+					letter-spacing: 0.06em !important;
+					margin: 0 0 10px !important;
+					width: 100% !important;
+					padding: 0;
+					@include screen(mobile-max) {
+						margin-bottom: 5px;
+						font-size: 15px;
+					}
+				}
+				.ginput_container{
+					margin:0;
+				}
+			}
+			h3.gform_title{
+				color: $blue;
+				text-align: center;
+				font-size: 32px;
+				line-height: 48px;
+				font-weight: 500;
+				margin: 0 0 40px;
+				font-family: $pt-sans;
+				@include screen(mobile-max) {
+					font-size: 26px;
+					line-height: 35px;
+					margin-bottom: 21px;
+				}
+			}
+			.box{
+				border: 2px solid #d7d7d7;
+				@include border-radius(10px);
+				padding: 51px 118px 65px;
+				@include screen(mobile-max) {
+					padding: 25px 10px;
+				}
+			}
+		}
+		.drh_lesson_video{
+			margin-bottom: 89px;
+			@include screen(mobile-max) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	&_comment{
+		@include clearfix();
+		margin-left: -104px;
+		margin-right: -104px;
+		padding-top: 104px;
+		padding-bottom: 80px;
+		@include screen(tablet-max) {
+			margin-left: -40px;
+			margin-right: -40px;
+		}
+		@include screen(mobile-max) {
+			padding-top: 50px;
+			padding-bottom: 40px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	&__schedule{
+		.less-page-header-copy{
+			margin-bottom:53px;
+		}
+		.community-call-box .copy{
+			max-width:440px;
+		}
+		.community-call-box .call-time > span{
+			letter-spacing:0.05em;
+		}
+	}
+	&__fullschedule{
+		margin-bottom: 140px;
+		@include screen(mobile-max) {
+			margin-bottom: 50px;
+		}
+		h1{
+			font-size:36px;
+			@include screen(mobile-max) {
+				font-size:34px;
+			}
+		}
+		.fullschedule-main{
+			border-top:1px solid #efefef;
+		}
+		.fullschedule-list{
+			border-bottom:1px solid #efefef;
+			overflow:hidden;
+			padding:20px 0 10px 0;
+			@include screen(mobile-max) {
+				padding-top:0;
+			}
+			h6{
+				color:$blue;
+				font-weight:700;
+				@include screen(mobile-max) {
+					padding:0 0 5px 0;
+				}
+			}
+			li{
+				padding:0 0 15px 0;
+				@include screen(mobile-max) {
+					padding:0 0 10px 0;
+				}
+			}
+			p, li{
+				font-family:normal;
+			}
+			h6 , p , li{
+				font-size:17px;
+				font-family:$pt-sans;
+			}
+		}
+		.col-1{
+			width: 240px / 810px * 100%;
+			float:left;
+		}
+		.col-2{
+			width: 280px / 810px * 100%;
+			float:left;
+		}
+		.col-3{
+			width: 290px / 810px * 100%;
+			float:left;
+			li{
+				font-weight:700;
+			}
+		}
+		.col-1 , .col-2 , .col-3{
+			@include screen(mobile-max) {
+				width:100%;
+				float:none;
+				margin:20px 0 0 0;
+			}
+		}
+	}
+	&__schedule__recordings{
+		border-top:1px solid #f2f2f2;
+		padding:50px 0;
+		@include screen(mobile-max) {
+			padding:30px 0 0 0;
+		}
+		h1{
+			font-size:36px;
+			@include screen(mobile-max) {
+				font-size:34px;
+			}
+		}
+	}
+	&__recordings{
+		padding:34px 0 0 0;
+		margin:0 -30px;
+		overflow:hidden;
+		@include screen(tablet-min-small) {
+			display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -ms-flexbox;
+		    display: flex;
+		    -webkit-flex-wrap:wrap;
+		        -ms-flex-wrap:wrap;
+		            flex-wrap:wrap;
+		}
+		@include screen(tablet-max) {
+			margin:0 -20px;
+		}
+		@include screen(mobile-max) {
+			margin:0;
+		}
+		.col{
+			width:50%;
+			float:left;
+			padding:0 30px;
+			margin:0 0 51px 0;
+			@include screen(tablet-min-small) {
+				display: -webkit-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			}
+			@include screen(tablet-max) {
+				padding:0 20px;
+				margin:0 0 40px 0;
+			}
+			@include screen(mobile-max) {
+				float:none;
+				width:100%;
+				padding:0;
+				margin:0 0 30px 0;
+			}	
+		}
+		.box{
+			border: 2px solid #f3f5f4;
+			@include border-radius(3px);
+			width: 100%;
+			height:auto;
+			font-family: $pt-sans;
+			@include screen(mobile-max) {
+				height:auto;
+			}
+			h4{
+				text-align:center;
+				color:#464646;
+				padding:13px 16px;
+				margin:0;
+				font-family:$pt-sans;
+				font-size:20px;
+				letter-spacing:0.02em;
+				border-bottom: 1px solid #f3f5f4;
+			}
+		}
+		&__col{
+			padding:20px 15px 20px 15px;
+			overflow:hidden;
+			border-bottom: 1px solid #f3f5f4;
+			@include screen(mobile-max) {
+				padding:20px 15px;
+			}
+			.col1{
+				color:#111111;
+				font-size:18px;
+				font-family: $pt-sans;
+				font-weight:800;
+				float:left;
+				margin:0px 0 0 0;
+				width:60%;
+				max-height:40px;
+				overflow:hidden;
+				@include screen(tablet-max) {
+					display:block;
+					float:none;
+					width:100%;
+					margin:5px 0 15px 0;
+				}
+				@include screen(mobile-max) {
+					height:auto;
+				}
+			}
+			.col2{
+				float:right;
+				width:40%;
+				text-align:right;
+				@include screen(tablet-max) {
+					display:block;
+					text-align:left;
+					float:none;
+					width:100%;
+				}
+			}
+			&:last-child{
+				border:none;
+			}
+		}
+	}
+	&__facebook{
+		padding-top: 45px;
+		@include screen(mobile-max) {
+			padding-top: 27px;
+		}
+		.lesson-page-title{
+			h1{
+				margin-top:18px;
+				margin-bottom:24px;
+			}
+			p{
+				font-size: 18px;
+				line-height: 28px;
+				font-family: 'PT Serif', serif;
+				color: $gray;
+				letter-spacing: 0.028em;
+				@include screen(mobile-max) {
+					font-size: 15px;
+					line-height: 21px;
+				}
+			}
+		}
+		&-main{
+			padding-top:75px;
+		}
+		&-content{
+			padding:67px 0 74px 0;
+			border-top:1px solid #efefef;
+			@include screen(mobile-max) {
+					padding:40px 0 54px 0;
+			}
+			&.mailbox{
+				padding:86px 0 90px 0;
+				@include screen(mobile-max) {
+					padding:40px 0 54px 0;
+				}
+				h2{
+					margin-bottom:31px;	
+				}
+			}
+			&.joincommunity{
+				padding:86px 0 0 0;
+				@include screen(mobile-max) {
+					padding:40px 0 0 0;
+				}
+				figure{
+					margin:0 0 15px 0;
+				}
+			}
+			h2{
+				text-align:center;
+				margin-bottom:17px;
+				span{
+					color:$blue;
+				}
+			}
+			article{
+				margin:0;
+			}
+			figure{
+				margin:0;
+				padding:0;
+				text-align:center;
+				img{
+					max-width:585px;
+					@include screen(tablet-max) {
+							max-width:100%;
+					}
+				}
+				
+			}
+		}
+		.facebook-email-box{
+			overflow:hidden;
+			margin:30px 0 0 0;
+			.inputtext , input[type="email"] {
+				width:72% !important;
+				height:40px !important;
+				line-height:40px !important;
+				margin:0;
+				border-right:none;
+				float:left;
+				box-shadow:none;
+				border-radius:0;
+				font-size:17px;
+				padding-left:15px;
+				font-family:$pt-sans;
+				border:1px solid #cecece;
+			}
+			.button , input[type="submit"]{
+				width:28% !important;
+				height:40px !important;
+				margin:0;
+				border-radius:0;
+				float:left;
+				font-size:17px;
+				color:#fff;
+				text-transform:capitalize;
+				font-family:$pt-sans;
+				border-color:#e7482f;
+				&:hover{
+					background:#e7482f;
+					color:#fff;
+					border-color:#e7482f;
+				}
+			}
+			label{
+					display:none!important;
+			}
+			.gform_footer{
+				position: relative;
+			}
+			.gform_footer.left_label {
+				margin: 0!important;
+				padding: 0!important;
+				display: inline;
+			}
+			.validation_error {
+				color: #e7482f !important;
+				font-size: 0!important;
+				font-weight: bold;
+				margin-bottom: 1.6em;
+				border: none!important;
+				font-family: "PT Sans",sans-serif!important;
+				padding: 0!important;
+				clear: both;
+			}
+			.gfield.gfield_error{
+				border: none!important;
+				background-color: transparent!important;
+			}
+			.gfield{
+				position: relative;
+			}
+			.gfield_description.validation_message{
+				color: #e7482f !important;
+				position: absolute;
+				left:0;
+				top: -30px;
+				width:100%!important;
+			}
+			.gform_footer.top_label {
+				display: inline!important;
+			}
+			.gforms_confirmation_message{
+				padding-top:48px;
+			}
+		}
+	}
+
+	.btn{
+		@extend %btn;
+	}
+	.jqte{
+		border: 0;
+		box-shadow: none;
+		margin: 0 0 30px;
+		border-radius: 0;
+		position: static;
+	}
+	.jqte_toolbar{
+		display: inline-block;
+		background-color: $white;
+		border: 1px solid #d3d0cb;
+		@include border-radius(4px);
+		padding: 0;
+		margin-bottom: 21px;
+	}
+	.jqte_tool{
+		border:0;
+		padding: 0 15px;
+		@include border-radius(0);
+		border-right: 1px solid #d3d0cb;
+		@include screen(mobile-max) {
+			padding: 0 8px;
+		}
+		&:last-child{
+			border-right: 0;
+		}
+		&:hover{
+			.jqte_tool_icon{
+				border:0;
+				opacity: .8;
+			}
+		}
+	}
+	.jqte_tool_icon{
+		border:0;
+		width: auto;
+		background-image: url("../images/jquery-te.png");
+		background-size: cover;
+	}
+	.jqte_tool.jqte_tool_4 .jqte_tool_icon {
+	    background-position: -11px 0;
+	    width: 25px;
+	}
+	.jqte_tool.jqte_tool_5 .jqte_tool_icon {
+	    background-position: -65px 0;
+	    width: 26px;
+	}
+	.jqte_tool.jqte_tool_7 .jqte_tool_icon {
+		background-position: -193px 0;
+		width: 74px;
+	}
+	.jqte_tool.jqte_tool_8 .jqte_tool_icon {
+	    background-position: -117px;
+	    width: 59px;
+	}
+	.jqte_editor, .jqte_source{
+		max-height: inherit;
+	}
+	.jqte_placeholder_text, 
+	.jqte_editor, .jqte_source{
+		font-size: 17px;
+		line-height: 27px;
+		font-family: 'PT Serif', serif;
+		font-weight: normal;
+		resize:none;
+		padding: 0;
+		@include screen(mobile-max) {
+			font-size: 15px;
+			line-height: 24px;
+		}
+		div, p, li, em, i, strong, b, a{
+			font-size: 17px;
+			line-height: 27px;
+			font-family: 'PT Serif', serif;
+			font-weight: normal;
+			resize:none;
+			padding: 0;
+			@include screen(mobile-max) {
+				font-size: 15px;
+				line-height: 24px;
+			}
+		}
+		a, a:link, a:focus{
+			color: $blue !important;
+			text-decoration: underline;
+			&:hover{
+				color: $blue !important;
+			}
+		}
+		em, i{
+			strong, b{
+				font-weight: 800;
+			}
+		}
+		strong, b{
+			font-weight: 800;
+			em, i{
+				font-weight: 800;
+			}
+		}
+	}
+	.jqte_editor div, .jqte_editor p{
+		margin: 0;
+	}
+	.jqte_editor ol, .jqte_editor ul{
+		margin: 0 0 0 30px;
+		li{
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.jqte_editor ol{
+		li{
+			list-style-type: decimal;
+		}
+	}
+	.jqte_editor ul{ 
+		li{
+			list-style-type: disc;
+		}
+	}
+
+	.jqte_editor strong, .jqte_source strong, .jqte_editor b, .jqte_source b,
+	.jqte_editor em strong, .jqte_source em strong, .jqte_editor i b, .jqte_source i b{
+		font-weight: 700;
+	}
+	.jqte_editor em, .jqte_source em, .jqte_editor i, .jqte_source i{
+		font-weight: normal;
+	}
+	.jqte_placeholder_text{
+		top: 0; left: 0;
+	}
+	.jqte_focused{
+		.jqte_placeholder_text{
+			top: 52px; left: 0;
+		}	
+	}
+	.jqte{
+		&.is-open{
+			.jqte_placeholder_text{
+				top: 52px; left: 0;
+			}
+		}
+		.edit-this-response-block{
+			margin-bottom: 22px;
+			display: block;
+			font-size: 12px;
+			line-height: 22px;
+			color: #b8b8b8;
+			font-family: $pt-sans;
+			span{
+				font-size: 12px;
+				line-height: 22px;
+				color: #b8b8b8;
+				font-family: $pt-sans;
+				padding-left: 15px;
+				display: inline-block;
+				vertical-align: top;
+				@include screen(mobile-max) {
+					display: block;
+					padding-left: 0;
+				}
+			}
+			.edit-this-response{
+				font-size: 16px;
+				line-height: 22px;
+				text-decoration: underline;
+				font-family: $pt-sans;
+			}
+		}
+	}
+	.jqte_editor{
+		background-color: $white;
+		background-image: url("../images/document-body-rules.png");
+		background-repeat: repeat-y;
+		padding-bottom: 57px;
+		@include screen(mobile-max) {
+			background-image: url("../images/document-body-rules-mobile.png");
+		}
+	}
+	.save-note{
+		@extend %btn;
+		@extend .secondary;
+		height: 36px;
+		width: 142px;
+		padding: 0;
+		line-height: 36px;
+	}
+
+	//
+	//	Welcome page
+	//	===============
+	&_btn_area{
+		font-size: 0;
+		.btn{
+			margin-right: 16px;
+			min-width: 216px;
+			@include screen(mobile-max) {
+				margin: 0 auto 15px;
+				display: block;
+				max-width: 220px;
+				width: 100%;
+			}
+		}
+	}
+	&__welcom{
+		.drh_lesson_video-single{
+			margin-bottom: 38px;
+		}
+		&-box{
+			// display: none;
+			max-width: 600px;
+			border: 2px solid #d7d7d7;
+			margin: 34px auto 0;
+			@include border-radius(10px);
+			overflow: hidden;
+			font-size: 22px;
+			line-height: 28px;
+			letter-spacing: 0.019em;
+			a:link, a:visited, a{
+				color: $blue;
+				&:hover{
+					text-decoration: underline;
+				}
+				&.btn{
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+			p{
+				font-size: 22px;
+				line-height: 28px;
+				letter-spacing: 0.019em;
+				margin-bottom: 46px;
+			}
+			h3{
+				font-family: $pt-sans;
+				font-size: 24px;
+				line-height: 40px;
+				font-weight: 700;
+				margin-bottom: 12px;
+			}
+			h2{
+				font-size: 32px; font-weight: 400;
+				font-family: $pt-sans;
+				letter-spacing: 0.01em;
+				margin-bottom: 46px;
+				@include screen(mobile-max) {
+					font-size: 22px;
+					margin-bottom: 22px;
+				}
+			}
+			&-body{
+				padding: 60px 30px 75px;
+				@include screen(mobile-max) {
+					padding: 30px 19px 40px;
+				}
+				.btn.medium{
+					@include border-radius(40px);
+					min-width: 260px;
+					position: relative;
+					padding-left: 40px;
+					@include screen(mobile-max) {
+						min-width: inherit;
+						width: 100%;
+					}
+					&:after{
+						content: '';
+						width: 0; 
+						height: 0; 
+						border-top: 4px solid transparent;
+						border-bottom: 4px solid transparent;
+						
+						border-left: 4px solid $white;
+						display: inline-block;
+						margin-left: 14px;
+					    vertical-align: top;
+					    margin-top: 19px;
+						// position: absolute; top: 20px; right: 47px;
+					}
+				}
+				.jumptopage{
+					padding: 46px 0 0;
+					label{
+						display: inline-block;
+						vertical-align: middle;
+						@include screen(mobile-max) {
+							display: block;
+							margin-bottom: 5px;
+						}
+					}
+				}
+				.form-input{
+					border: 1px solid #cecece;
+					@include border-radius(2px);
+					width: 100%;
+					height: 40px;
+					font-size: 17px;
+					font-family: $pt-sans;
+					margin-bottom: 0;
+					display: block;
+					letter-spacing: 0.03em;
+					line-height: 22px;
+					padding: 7px 8px !important;
+					box-shadow: none;
+					max-width: 160px;
+					display: inline-block;
+					vertical-align: middle;
+					@include screen(mobile-max) {
+						font-size: 15px;
+						margin-bottom: 15px;
+						width: 100%;
+						max-width: inherit;
+					}
+				}
+			}
+			&-footer{
+				border-top: 1px solid #c9c9c9;
+				background-color: #fbfbfb;
+				padding: 30px;
+				@include screen(mobile-max) {
+					padding: 10px;
+					font-size: 17px;
+					line-height: 22px;
+				}
+				a:link, a:visited, a{
+					text-decoration: underline;
+					color: $blue;
+				}
+			}
+		}
+	}
+}
