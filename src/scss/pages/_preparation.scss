@@ -484,8 +484,10 @@
 			}
 			.default-copy{
 				h2{
-					text-align:left;
 					padding-top:20px;
+					&.text-left{
+						text-align:left;
+					}
 				}
 			}
 		}

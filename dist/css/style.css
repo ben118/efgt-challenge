@@ -1719,8 +1719,9 @@ input[type="password"] {
             .drh_lesson_overview-tab-nav li.is-open a, .drh_lesson_overview-tab-nav li:hover a {
               color: #fff; }
       .drh_lesson_overview-tab .default-copy h2 {
-        text-align: left;
         padding-top: 20px; }
+        .drh_lesson_overview-tab .default-copy h2.text-left {
+          text-align: left; }
     .drh_lesson_overview-item {
       padding: 0 16px; }
       @media only screen and (max-width: 1024px) {
