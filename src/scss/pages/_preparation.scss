@@ -82,6 +82,15 @@
 		background-repeat: no-repeat;
 		background-color: transparent;
 		margin-top: -5px;
+		&.morning{
+			background-image:url("#{$imagedir}/morning-icon.png");
+		}
+		&.noon{
+			background-image:url("#{$imagedir}/noon-icon.png");
+		}
+		&.evening{
+			background-image:url("#{$imagedir}/evening-icon.png");
+		}
 	}
 	.menuicon-calendar{
 		font-size: 28px;
@@ -565,8 +574,7 @@
 		}
 		&-item{
 			margin-bottom: 47px;
-
-			li{
+			/*li{
 				position: relative;
 				display: block;
 				color: #111111;
@@ -616,7 +624,7 @@
 				&.checked{
 					text-decoration: line-through;
 				}
-			}
+			}*/
 		}
 
 	}

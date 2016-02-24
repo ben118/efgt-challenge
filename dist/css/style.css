@@ -1377,6 +1377,12 @@ input[type="password"] {
     background-repeat: no-repeat;
     background-color: transparent;
     margin-top: -5px; }
+    .drh_lesson .background-icon.morning {
+      background-image: url("../images/morning-icon.png"); }
+    .drh_lesson .background-icon.noon {
+      background-image: url("../images/noon-icon.png"); }
+    .drh_lesson .background-icon.evening {
+      background-image: url("../images/evening-icon.png"); }
   .drh_lesson .menuicon-calendar {
     font-size: 28px;
     display: inline-block;
@@ -1791,60 +1797,58 @@ input[type="password"] {
           .drh_lesson_checklist-tab-nav li.is-open a, .drh_lesson_checklist-tab-nav li:hover a {
             color: #fff; }
     .drh_lesson_checklist-item {
-      margin-bottom: 47px; }
-      .drh_lesson_checklist-item li {
-        position: relative;
-        display: block;
-        color: #111111;
-        cursor: pointer;
-        padding-left: 27px;
-        margin-bottom: 8px;
-        letter-spacing: 0.03em;
-        -moz-transition: color 0.5s ease-in-out;
-        -o-transition: color 0.5s ease-in-out;
-        -webkit-transition: color 0.5s ease-in-out;
-        transition: color 0.5s ease-in-out; }
-        @media only screen and (max-width: 767px) {
-          .drh_lesson_checklist-item li {
-            font-size: 15px;
-            line-height: 21px; } }
-        .drh_lesson_checklist-item li:before, .drh_lesson_checklist-item li:after {
-          -webkit-border-radius: 50%;
-          border-radius: 50%;
-          background-clip: padding-box;
-          /* stops bg color from leaking outside the border: */
-          -moz-transition: background-color 0.5s ease-in-out;
-          -o-transition: background-color 0.5s ease-in-out;
-          -webkit-transition: background-color 0.5s ease-in-out;
-          transition: background-color 0.5s ease-in-out;
-          content: '';
-          display: block;
-          position: absolute; }
-        .drh_lesson_checklist-item li:before {
-          width: 15px;
-          height: 15px;
-          background-color: #fff;
-          border: 1px solid #111111;
-          left: 3px;
-          top: 7px; }
-          @media only screen and (max-width: 767px) {
-            .drh_lesson_checklist-item li:before {
-              top: 2px; } }
-        .drh_lesson_checklist-item li:after {
-          height: 9px;
-          width: 9px;
-          left: 6px;
-          top: 10px;
-          background-color: #fff; }
-          @media only screen and (max-width: 767px) {
-            .drh_lesson_checklist-item li:after {
-              top: 5px; } }
-        .drh_lesson_checklist-item li:hover, .drh_lesson_checklist-item li.checked {
-          color: #898989; }
-          .drh_lesson_checklist-item li:hover:after, .drh_lesson_checklist-item li.checked:after {
-            background-color: #214975; }
-        .drh_lesson_checklist-item li.checked {
-          text-decoration: line-through; }
+      margin-bottom: 47px;
+      /*li{
+      	position: relative;
+      	display: block;
+      	color: #111111;
+      	cursor: pointer;
+      	padding-left: 27px;
+      	margin-bottom: 8px;
+      	letter-spacing: 0.03em;
+      	@include transition(color .5s ease-in-out);
+      	@include screen(mobile-max) {
+      		font-size: 15px;
+      		line-height: 21px;
+      	}
+      	&:before, &:after{
+      		@include border-radius(50%);
+      		@include transition(background-color .5s ease-in-out);
+      		content: '';
+      		display: block;
+      		position: absolute;
+      	}
+      	&:before{
+      		width: 15px;
+      		height: 15px;
+      		background-color: $white;
+      		border: 1px solid #111111;
+      		left: 3px;
+      		top: 7px;
+      		@include screen(mobile-max) {
+      			top: 2px;
+      		}
+      	}
+      	&:after{
+      		height: 9px;
+      		width: 9px;
+      		left: 6px;
+      		top: 10px;
+      		background-color: $white;
+      		@include screen(mobile-max) {
+      			top: 5px;
+      		}
+      	}
+      	&:hover, &.checked{
+      		color: #898989;
+      		&:after{
+      			background-color: $blue;
+      		}
+      	}
+      	&.checked{
+      		text-decoration: line-through;
+      	}
+      }*/ }
   .drh_lesson_tips {
     margin: 0 -16px 64px; }
     .drh_lesson_tips:before, .drh_lesson_tips:after {
