@@ -26,7 +26,32 @@
 			$('.header .browse-menu').slideToggle();
 			$('.header .navigation').slideUp();
 			$('.header .menu-toggle').removeClass('active');
-		});	
+		});
+
+		var $tabMenuLink = $('.tabs .tab-nav a');
+
+		$tabMenuLink.on('touchstart click', function(e){
+			e.preventDefault();
+			var $self = $(this),
+				$parent = $self.closest( '.tabs' );
+				$target = $self.attr('href');
+
+			var $elem = $($target);
+				$elemID = $elem.attr('id');
+
+			// var isTabOpen = $elem.hasClass('is-open') ? 1 : 0;
+
+			$parent.find( '> .tab-nav li' ).removeClass('is-open');
+
+			$parent.find( '> .tab-container > .tab-item' ).fadeOut("fast").removeClass('is-open');
+
+			$self.closest('li').addClass('is-open');
+			$elem.fadeIn().addClass('is-open');
+
+			e.stopPropagation();
+			return false;
+		});
+
 		enquire
             .register("screen and (max-width:1023px)", function() {
                 
@@ -37,5 +62,6 @@
                 $('.header .browse-menu').removeAttr('style');
                 $('.header .browse-course').removeClass('active');
             });
+
 	});
 })(jQuery);

@@ -1360,7 +1360,10 @@ input[type="password"] {
       display: block; }
   .drh_lesson_main-content {
     min-height: 600px;
-    padding: 0 0 100px 0; }
+    padding: 0 0 80px 0; }
+    @media only screen and (min-width: 768px) {
+      .drh_lesson_main-content {
+        padding: 0 0 150px 0; } }
   .drh_lesson .default-box p {
     margin-bottom: 16px; }
   .drh_lesson .background-icon {
@@ -1594,9 +1597,9 @@ input[type="password"] {
         .drh_lesson_video-tab-nav li:last-child {
           border-bottom: 0; }
         .drh_lesson_video-tab-nav li.is-open a {
-          color: #214975; }
+          color: #365e85; }
           .drh_lesson_video-tab-nav li.is-open a:after {
-            color: #214975; }
+            color: #365e85; }
         .drh_lesson_video-tab-nav li.in-play a:after {
           content: "\e60e"; }
         .drh_lesson_video-tab-nav li.watched a {
@@ -1782,7 +1785,7 @@ input[type="password"] {
           .drh_lesson_checklist-tab-nav li a:hover {
             text-decoration: none; }
         .drh_lesson_checklist-tab-nav li.is-open, .drh_lesson_checklist-tab-nav li:hover {
-          background-color: #214975; }
+          background-color: #365e85; }
           .drh_lesson_checklist-tab-nav li.is-open a, .drh_lesson_checklist-tab-nav li:hover a {
             color: #fff; }
     .drh_lesson_checklist-item {

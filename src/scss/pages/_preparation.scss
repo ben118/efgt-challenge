@@ -62,9 +62,9 @@
 	}
 	&_main-content{
 		min-height: 600px;
-		padding:0 0 100px 0;
+		padding:0 0 80px 0;
 		@include screen(tablet) {
-
+			padding:0 0 150px 0;
 		}
 	}
 	.default-box{
@@ -337,9 +337,9 @@
 
 					&.is-open{
 						a{
-							color: $blue;
+							color: $blueoption;
 							&:after{
-								color: $blue;
+								color: $blueoption;
 							}
 						}
 					}
@@ -553,7 +553,7 @@
 						}
 					}
 					&.is-open, &:hover{
-						background-color: $blue;
+						background-color: $blueoption;
 						a{
 							color: $white;
 						}
