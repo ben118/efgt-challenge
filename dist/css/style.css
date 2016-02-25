@@ -925,6 +925,14 @@ input[type="password"] {
   background: #e8ecf1;
   height: 60px;
   position: relative; }
+@media only screen and (min-width: 1024px) {
+  .header.loginheader .logo {
+    float: none;
+    margin: 22px 0 0 0; } }
+@media only screen and (min-width: 1024px) {
+  .header.loginheader .back-to-drh {
+    position: absolute;
+    left: 20px; } }
 .header .logo {
   text-align: center;
   margin: 14px 0 0 0;
@@ -1230,7 +1238,7 @@ input[type="password"] {
   padding: 50px 0; }
   @media only screen and (min-width: 768px) {
     .program-login {
-      min-height: 800px; } }
+      min-height: 600px; } }
   @media only screen and (min-width: 768px) {
     .program-login.dashboardpage .box .content {
       padding: 60px 78px 30px 78px; } }
