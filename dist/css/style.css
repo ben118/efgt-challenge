@@ -1231,6 +1231,12 @@ input[type="password"] {
   @media only screen and (min-width: 768px) {
     .program-login {
       min-height: 800px; } }
+  .program-login.dashboardpage .box .copy {
+    margin-bottom: 0; }
+    .program-login.dashboardpage .box .copy p {
+      color: #464646;
+      text-align: left;
+      margin: 0 0 20px 0; }
   .program-login .container {
     margin-left: auto;
     margin-right: auto;
