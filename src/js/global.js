@@ -80,12 +80,11 @@ var docCookies = {
 	$(document).ready(function() {
 
 		//Redirect user to login page if he/she is not login.
-		console.log(docCookies.getItem('user_login_check') );
 		if( '/login.html' === document.location.pathname ) {
 
 				// If login cookie exist then redirect user to dashboard page.
 				if( docCookies.getItem('user_login_check') ) {
-					window.location.assign( '/dashboard' );
+					window.location.assign( '/dashboard.html' );
 				}
 		}else if( ! docCookies.getItem('user_login_check') ) {
 			window.location.assign('/login.html');
