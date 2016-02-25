@@ -397,6 +397,9 @@
 				font-size: 16px;
 				line-height: 24px;
 			}
+			&.checklist-tab{
+				padding:50px 0 0 0;
+			}
 			p{
 				font-size: 17px;
 				line-height: 28px;	
@@ -490,6 +493,9 @@
 						}
 					}
 				}
+				&.tab-nav-big{
+					max-width: 600px;
+				}
 			}
 			.default-copy{
 				h2{
@@ -519,6 +525,7 @@
 				padding: 0;
 			}
 		}
+		
 	}
 	&_checklist{
 		@include clearfix();

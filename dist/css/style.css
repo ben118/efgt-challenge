@@ -1183,7 +1183,7 @@ input[type="password"] {
   @media only screen and (min-width: 1024px) {
     .header .menu li {
       float: left;
-      margin: 0; } }
+      margin: 0 5px; } }
   .header .menu li a {
     font-size: 18px;
     color: #214975;
@@ -1196,8 +1196,8 @@ input[type="password"] {
     @media only screen and (min-width: 1024px) {
       .header .menu li a {
         font-size: 15px;
-        padding: 8px 35px; } }
-    .header .menu li a:hover {
+        padding: 8px 30px; } }
+    .header .menu li a:hover, .header .menu li a.active {
       background: #d4dbe4; }
 
 .footer {
@@ -1684,6 +1684,8 @@ input[type="password"] {
         .drh_lesson_overview-tab {
           font-size: 16px;
           line-height: 24px; } }
+      .drh_lesson_overview-tab.checklist-tab {
+        padding: 50px 0 0 0; }
       .drh_lesson_overview-tab p {
         font-size: 17px;
         line-height: 28px;
@@ -1772,6 +1774,8 @@ input[type="password"] {
             background-color: #214975; }
             .drh_lesson_overview-tab-nav li.is-open a, .drh_lesson_overview-tab-nav li:hover a {
               color: #fff; }
+        .drh_lesson_overview-tab-nav.tab-nav-big {
+          max-width: 600px; }
       .drh_lesson_overview-tab .default-copy h2 {
         padding-top: 20px; }
         .drh_lesson_overview-tab .default-copy h2.text-left {
