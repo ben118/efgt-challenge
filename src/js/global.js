@@ -20,7 +20,7 @@
 			$('.header .navigation').slideToggle();
 			$('.header .browse-menu').slideUp();
 			$('.header .browse-course').removeClass('active');
-		});	
+		});
 		$('.header .browse-course').click(function () {
 			$(this).toggleClass('active');
 			$('.header .browse-menu').slideToggle();
@@ -54,7 +54,7 @@
 
 		enquire
             .register("screen and (max-width:1023px)", function() {
-                
+
             })
             .register("screen and (min-width:1024px)", function() {
                 $('.header .navigation').removeAttr('style');
@@ -62,6 +62,32 @@
                 $('.header .browse-menu').removeAttr('style');
                 $('.header .browse-course').removeClass('active');
             });
+
+
+		// Login for submit button event.
+		$('#login-form').submit(function(){
+			var password = 'anatta';
+			var password_field = $( 'input[type="password"]', $(this) );
+			var error_field    = 	$( '.error', $(this) );
+
+			// hide error field.
+			error_field.hide();
+
+			console.log( password_field.val() );
+
+			// check user password.
+			if( password_field.val() === password ) {
+				return true;
+			}
+
+			// show inout field error
+			password_field.addClass('errorinput');
+
+			// show error.
+			error_field.show();
+
+			return false;
+		});
 
 	});
 })(jQuery);
