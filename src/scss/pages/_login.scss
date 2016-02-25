@@ -70,6 +70,7 @@
 	    }
 	}
 	.login-form{
+		overflow:hidden;
 		.input{
 			@include screen(tablet) {
 				width:325px;

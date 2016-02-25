@@ -675,6 +675,9 @@ em, i {
     .hide-on-desktop {
       display: none; } }
 
+.hide {
+  display: none; }
+
 .error {
   color: #ff322d;
   font-size: 13px;
@@ -1296,17 +1299,19 @@ input[type="password"] {
       text-decoration: underline; }
       .program-login .box-footer a:hover {
         text-decoration: none; }
-  @media only screen and (min-width: 768px) {
-    .program-login .login-form .input {
-      width: 325px;
-      float: left;
-      margin: 0; } }
-  .program-login .login-form .btn {
-    display: table;
-    margin: 0 auto; }
+  .program-login .login-form {
+    overflow: hidden; }
     @media only screen and (min-width: 768px) {
-      .program-login .login-form .btn {
-        float: right; } }
+      .program-login .login-form .input {
+        width: 325px;
+        float: left;
+        margin: 0; } }
+    .program-login .login-form .btn {
+      display: table;
+      margin: 0 auto; }
+      @media only screen and (min-width: 768px) {
+        .program-login .login-form .btn {
+          float: right; } }
 
 .drh_lesson {
   font-family: "PT Sans", sans-serif;
