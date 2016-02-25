@@ -694,7 +694,7 @@ em, i {
 .default-copy {
   font-size: 17px;
   line-height: 28px;
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   color: #464646;
   letter-spacing: 0.028em; }
   @media only screen and (max-width: 767px) {
@@ -1231,12 +1231,20 @@ input[type="password"] {
   @media only screen and (min-width: 768px) {
     .program-login {
       min-height: 800px; } }
+  @media only screen and (min-width: 768px) {
+    .program-login.dashboardpage .box .content {
+      padding: 60px 78px 30px 78px; } }
   .program-login.dashboardpage .box .copy {
-    margin-bottom: 0; }
+    margin: 20px 0 0 0; }
+    @media only screen and (min-width: 768px) {
+      .program-login.dashboardpage .box .copy {
+        margin: 40px 0 0 0; } }
     .program-login.dashboardpage .box .copy p {
       color: #464646;
+      opacity: 1;
       text-align: left;
-      margin: 0 0 20px 0; }
+      margin: 0 0 25px 0;
+      font-family: "PT Serif", serif; }
   .program-login .container {
     margin-left: auto;
     margin-right: auto;
