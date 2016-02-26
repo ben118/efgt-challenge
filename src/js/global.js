@@ -145,7 +145,7 @@ var docCookies = {
 			var password_field = $( 'input[type="password"]', $(this) );
 			var error_field    = 	$( '.error', $(this) );
 
-			var password = 'anatta';
+			var password = 'eatfatmarch';
 
 			// hide error field.
 			error_field.hide();
