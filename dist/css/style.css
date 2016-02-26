@@ -82,9 +82,6 @@ textarea {
 body {
   margin: 0; }
 
-* {
-  font-weight: normal; }
-
 /* ==========================================================================
    Links
    ========================================================================== */
@@ -104,29 +101,6 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-/**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-h1 {
-  font-size: 2em; }
-
-h2 {
-  font-size: 1.5em; }
-
-h3 {
-  font-size: 1.17em; }
-
-h4 {
-  font-size: 1em; }
-
-h5 {
-  font-size: 0.83em; }
-
-h6 {
-  font-size: 0.67em; }
-
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
@@ -567,12 +541,12 @@ input {
   content: "\e902"; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
   margin: 0 0 15px 0; }
 
 h1 {
   font-size: 32px;
-  line-height: 40px; }
+  line-height: 40px;
+  font-weight: normal; }
   @media only screen and (min-width: 768px) {
     h1 {
       font-size: 42px;
@@ -588,8 +562,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  line-height: 28px;
-  font-weight: 700; }
+  line-height: 28px; }
   @media only screen and (min-width: 768px) {
     h3 {
       font-size: 24px;
@@ -1318,7 +1291,8 @@ input[type="password"] {
         .program-login .box .content {
           padding: 60px 78px 70px 78px; } }
       .program-login .box .content h2 {
-        text-align: center; }
+        text-align: center;
+        font-weight: normal; }
     .program-login .box .copy {
       margin: 10px 0 25px 0; }
       @media only screen and (min-width: 768px) {
@@ -1475,7 +1449,9 @@ input[type="password"] {
     .drh_lesson-nav:after {
       clear: both; }
     .drh_lesson-nav .drh_lesson-title-sub {
-      color: #8cbd2f; }
+      color: #464646; }
+      .drh_lesson-nav .drh_lesson-title-sub i {
+        color: #8cbd2f; }
     .drh_lesson-nav .prev-page, .drh_lesson-nav .next-page {
       -webkit-border-radius: 50%;
       border-radius: 50%;
@@ -2229,38 +2205,38 @@ input[type="password"] {
       @media only screen and (max-width: 767px) {
         .drh_lesson_journal h3 {
           font-size: 17px; } }
-  .drh_lesson__bigideas, .drh_lesson__recipes {
+  .drh_lesson__tour, .drh_lesson__community, .drh_lesson__resources, .drh_lesson__recipes, .drh_lesson__support, .drh_lesson__facebook, .drh_lesson__bigideas {
     color: #464646;
     padding-top: 53px;
     padding-bottom: 180px; }
     @media only screen and (max-width: 767px) {
-      .drh_lesson__bigideas, .drh_lesson__recipes {
+      .drh_lesson__tour, .drh_lesson__community, .drh_lesson__resources, .drh_lesson__recipes, .drh_lesson__support, .drh_lesson__facebook, .drh_lesson__bigideas {
         padding-bottom: 90px;
         padding-top: 27px; } }
-    .drh_lesson__bigideas .lesson-page-title i, .drh_lesson__recipes .lesson-page-title i {
+    .drh_lesson__tour .lesson-page-title i, .drh_lesson__community .lesson-page-title i, .drh_lesson__resources .lesson-page-title i, .drh_lesson__recipes .lesson-page-title i, .drh_lesson__support .lesson-page-title i, .drh_lesson__facebook .lesson-page-title i, .drh_lesson__bigideas .lesson-page-title i {
       display: block;
       font-size: 40px;
       color: #8cbd2f;
       margin-bottom: 12px; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas .lesson-page-title i, .drh_lesson__recipes .lesson-page-title i {
+        .drh_lesson__tour .lesson-page-title i, .drh_lesson__community .lesson-page-title i, .drh_lesson__resources .lesson-page-title i, .drh_lesson__recipes .lesson-page-title i, .drh_lesson__support .lesson-page-title i, .drh_lesson__facebook .lesson-page-title i, .drh_lesson__bigideas .lesson-page-title i {
           font-size: 30px;
           margin-bottom: 6px; } }
-    .drh_lesson__bigideas .lesson-page-title h1, .drh_lesson__recipes .lesson-page-title h1 {
-      color: #8cbd2f;
+    .drh_lesson__tour .lesson-page-title h1, .drh_lesson__community .lesson-page-title h1, .drh_lesson__resources .lesson-page-title h1, .drh_lesson__recipes .lesson-page-title h1, .drh_lesson__support .lesson-page-title h1, .drh_lesson__facebook .lesson-page-title h1, .drh_lesson__bigideas .lesson-page-title h1 {
+      color: #464646;
       font-size: 32px;
       line-height: 40px;
       margin-bottom: 30px; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas .lesson-page-title h1, .drh_lesson__recipes .lesson-page-title h1 {
+        .drh_lesson__tour .lesson-page-title h1, .drh_lesson__community .lesson-page-title h1, .drh_lesson__resources .lesson-page-title h1, .drh_lesson__recipes .lesson-page-title h1, .drh_lesson__support .lesson-page-title h1, .drh_lesson__facebook .lesson-page-title h1, .drh_lesson__bigideas .lesson-page-title h1 {
           font-size: 26px;
           line-height: 30px;
           margin-bottom: 20px; } }
-    .drh_lesson__bigideas .container, .drh_lesson__recipes .container {
+    .drh_lesson__tour .container, .drh_lesson__community .container, .drh_lesson__resources .container, .drh_lesson__recipes .container, .drh_lesson__support .container, .drh_lesson__facebook .container, .drh_lesson__bigideas .container {
       max-width: 604px;
       margin: 0 auto;
       padding: 0; }
-    .drh_lesson__bigideas h1, .drh_lesson__recipes h1 {
+    .drh_lesson__tour h1, .drh_lesson__community h1, .drh_lesson__resources h1, .drh_lesson__recipes h1, .drh_lesson__support h1, .drh_lesson__facebook h1, .drh_lesson__bigideas h1 {
       font-family: "PT Sans", sans-serif;
       font-size: 42px;
       line-height: 40px;
@@ -2269,11 +2245,11 @@ input[type="password"] {
       letter-spacing: 0.019em;
       margin-bottom: 39px; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas h1, .drh_lesson__recipes h1 {
+        .drh_lesson__tour h1, .drh_lesson__community h1, .drh_lesson__resources h1, .drh_lesson__recipes h1, .drh_lesson__support h1, .drh_lesson__facebook h1, .drh_lesson__bigideas h1 {
           font-size: 34px;
           line-height: 40px;
           margin-bottom: 20px; } }
-    .drh_lesson__bigideas h2, .drh_lesson__recipes h2 {
+    .drh_lesson__tour h2, .drh_lesson__community h2, .drh_lesson__resources h2, .drh_lesson__recipes h2, .drh_lesson__support h2, .drh_lesson__facebook h2, .drh_lesson__bigideas h2 {
       font-size: 24px;
       line-height: 28px;
       font-family: "PT Sans", sans-serif;
@@ -2281,47 +2257,47 @@ input[type="password"] {
       letter-spacing: 0.01em;
       margin-bottom: 27px; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas h2, .drh_lesson__recipes h2 {
+        .drh_lesson__tour h2, .drh_lesson__community h2, .drh_lesson__resources h2, .drh_lesson__recipes h2, .drh_lesson__support h2, .drh_lesson__facebook h2, .drh_lesson__bigideas h2 {
           font-size: 20px;
           line-height: 24px;
           margin-bottom: 18px; } }
-    .drh_lesson__bigideas p, .drh_lesson__recipes p {
+    .drh_lesson__tour p, .drh_lesson__community p, .drh_lesson__resources p, .drh_lesson__recipes p, .drh_lesson__support p, .drh_lesson__facebook p, .drh_lesson__bigideas p {
       font-size: 17px;
       line-height: 28px;
       font-family: 'PT Serif', serif;
       color: #464646;
       letter-spacing: 0.028em; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas p, .drh_lesson__recipes p {
+        .drh_lesson__tour p, .drh_lesson__community p, .drh_lesson__resources p, .drh_lesson__recipes p, .drh_lesson__support p, .drh_lesson__facebook p, .drh_lesson__bigideas p {
           font-size: 15px;
           line-height: 21px; } }
-    .drh_lesson__bigideas .less-page-header-copy, .drh_lesson__recipes .less-page-header-copy {
+    .drh_lesson__tour .less-page-header-copy, .drh_lesson__community .less-page-header-copy, .drh_lesson__resources .less-page-header-copy, .drh_lesson__recipes .less-page-header-copy, .drh_lesson__support .less-page-header-copy, .drh_lesson__facebook .less-page-header-copy, .drh_lesson__bigideas .less-page-header-copy {
       margin-bottom: 84px; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas .less-page-header-copy, .drh_lesson__recipes .less-page-header-copy {
+        .drh_lesson__tour .less-page-header-copy, .drh_lesson__community .less-page-header-copy, .drh_lesson__resources .less-page-header-copy, .drh_lesson__recipes .less-page-header-copy, .drh_lesson__support .less-page-header-copy, .drh_lesson__facebook .less-page-header-copy, .drh_lesson__bigideas .less-page-header-copy {
           margin-bottom: 42px; } }
-    .drh_lesson__bigideas .drh_lesson__tour-image, .drh_lesson__recipes .drh_lesson__tour-image {
+    .drh_lesson__tour .drh_lesson__tour-image, .drh_lesson__community .drh_lesson__tour-image, .drh_lesson__resources .drh_lesson__tour-image, .drh_lesson__recipes .drh_lesson__tour-image, .drh_lesson__support .drh_lesson__tour-image, .drh_lesson__facebook .drh_lesson__tour-image, .drh_lesson__bigideas .drh_lesson__tour-image {
       height: 339px;
       display: block;
       margin-bottom: 27px;
       overflow: hidden; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas .drh_lesson__tour-image, .drh_lesson__recipes .drh_lesson__tour-image {
+        .drh_lesson__tour .drh_lesson__tour-image, .drh_lesson__community .drh_lesson__tour-image, .drh_lesson__resources .drh_lesson__tour-image, .drh_lesson__recipes .drh_lesson__tour-image, .drh_lesson__support .drh_lesson__tour-image, .drh_lesson__facebook .drh_lesson__tour-image, .drh_lesson__bigideas .drh_lesson__tour-image {
           height: auto;
           margin-bottom: 18px; } }
-    .drh_lesson__bigideas .drh_lesson__tour-list p, .drh_lesson__recipes .drh_lesson__tour-list p {
+    .drh_lesson__tour .drh_lesson__tour-list p, .drh_lesson__community .drh_lesson__tour-list p, .drh_lesson__resources .drh_lesson__tour-list p, .drh_lesson__recipes .drh_lesson__tour-list p, .drh_lesson__support .drh_lesson__tour-list p, .drh_lesson__facebook .drh_lesson__tour-list p, .drh_lesson__bigideas .drh_lesson__tour-list p {
       font-family: "PT Sans", sans-serif; }
-    .drh_lesson__bigideas .drh_lesson__tour-list .copy, .drh_lesson__recipes .drh_lesson__tour-list .copy {
+    .drh_lesson__tour .drh_lesson__tour-list .copy, .drh_lesson__community .drh_lesson__tour-list .copy, .drh_lesson__resources .drh_lesson__tour-list .copy, .drh_lesson__recipes .drh_lesson__tour-list .copy, .drh_lesson__support .drh_lesson__tour-list .copy, .drh_lesson__facebook .drh_lesson__tour-list .copy, .drh_lesson__bigideas .drh_lesson__tour-list .copy {
       font-family: "PT Sans", sans-serif; }
-    .drh_lesson__bigideas article, .drh_lesson__recipes article {
+    .drh_lesson__tour article, .drh_lesson__community article, .drh_lesson__resources article, .drh_lesson__recipes article, .drh_lesson__support article, .drh_lesson__facebook article, .drh_lesson__bigideas article {
       border-bottom: 1px solid #efefef;
       padding-bottom: 59px;
       margin-bottom: 52px; }
       @media only screen and (max-width: 767px) {
-        .drh_lesson__bigideas article, .drh_lesson__recipes article {
+        .drh_lesson__tour article, .drh_lesson__community article, .drh_lesson__resources article, .drh_lesson__recipes article, .drh_lesson__support article, .drh_lesson__facebook article, .drh_lesson__bigideas article {
           padding-bottom: 30px;
           margin-bottom: 31px; } }
-      .drh_lesson__bigideas article:last-child, .drh_lesson__recipes article:last-child {
+      .drh_lesson__tour article:last-child, .drh_lesson__community article:last-child, .drh_lesson__resources article:last-child, .drh_lesson__recipes article:last-child, .drh_lesson__support article:last-child, .drh_lesson__facebook article:last-child, .drh_lesson__bigideas article:last-child {
         border-bottom: 0;
         padding-bottom: 0; }
   .drh_lesson__community {
@@ -2338,19 +2314,11 @@ input[type="password"] {
       margin-bottom: 42px; }
     .drh_lesson__community .drh_lesson__tour-image {
       margin-bottom: 52px;
-      border: 0; }
+      border: 0;
+      height: auto; }
       @media only screen and (max-width: 767px) {
         .drh_lesson__community .drh_lesson__tour-image {
           margin-bottom: 32px; } }
-    .drh_lesson__community .lesson-page-title .menuicon-community {
-      display: block;
-      font-size: 43px;
-      color: #214975;
-      margin-bottom: 20px; }
-      @media only screen and (max-width: 767px) {
-        .drh_lesson__community .lesson-page-title .menuicon-community {
-          font-size: 30px;
-          margin-bottom: 15px; } }
     .drh_lesson__community .btn-area-top {
       border-bottom: 1px solid #efefef;
       padding-bottom: 56px;
@@ -2360,9 +2328,8 @@ input[type="password"] {
           padding-bottom: 30px;
           margin-bottom: 31px; } }
       .drh_lesson__community .btn-area-top .btn {
-        max-width: 270px;
-        width: 100%;
-        margin: 0 5px; }
+        max-width: 210px;
+        width: 100%; }
     .drh_lesson__community article {
       border-bottom: 0;
       padding-bottom: 0; }

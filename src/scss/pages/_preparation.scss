@@ -127,7 +127,10 @@
 		
 		position: relative;
 		.drh_lesson-title-sub{
-			color: $green;
+			color: $gray;
+			i{
+				color:$green;
+			}
 		}
 		.prev-page, .next-page{
 			@include border-radius(50%);
@@ -978,8 +981,7 @@
 			}
 		}
 	}
-
-	&__bigideas , &__recipes{
+	&__tour, &__community, &__resources, &__recipes, &__support , &__facebook , &__bigideas{
 		color: $gray;
 		padding-top: 53px;
 		padding-bottom: 180px;
@@ -999,7 +1001,7 @@
 				}
 			}
 			h1{
-				color:$green;
+				color:$gray;
 				font-size: 32px;
 				line-height: 40px;
 				margin-bottom:30px;
@@ -1110,20 +1112,9 @@
 		.drh_lesson__tour-image{
 			margin-bottom: 52px;
 			border: 0;
+			height:auto;
 			@include screen(mobile-max) {
 				margin-bottom: 32px;
-			}
-		}
-		.lesson-page-title{
-			.menuicon-community{
-				display: block;
-				font-size: 43px;
-				color: $blue;
-				margin-bottom: 20px;
-				@include screen(mobile-max) {
-					font-size: 30px;
-					margin-bottom: 15px;
-				}
 			}
 		}
 		.btn-area-top{
@@ -1135,9 +1126,8 @@
 				margin-bottom: 31px;
 			}
 			.btn{
-				max-width: 270px;
+				max-width: 210px;
 				width: 100%;
-				margin:0 5px;
 			}
 		}
 		article{
@@ -2194,7 +2184,8 @@
 				margin-bottom: 12px;
 			}
 			h2{
-				font-size: 32px; font-weight: 400;
+				font-size: 32px; 
+				font-weight: 400;
 				font-family: $pt-sans;
 				letter-spacing: 0.01em;
 				margin-bottom: 46px;

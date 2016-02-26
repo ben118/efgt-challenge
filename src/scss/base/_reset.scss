@@ -99,9 +99,6 @@ body {
     margin: 0;
     
 }
-*{
-    font-weight: normal;
-}
 
 /* ==========================================================================
    Links
@@ -127,42 +124,6 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-
-/**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-
-h1 {
-    font-size: 2em;
-   
-}
-
-h2 {
-    font-size: 1.5em;
-    
-}
-
-h3 {
-    font-size: 1.17em;
-    
-}
-
-h4 {
-    font-size: 1em;
-    
-}
-
-h5 {
-    font-size: 0.83em;
-   
-}
-
-h6 {
-    font-size: 0.67em;
-   
-}
 
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
