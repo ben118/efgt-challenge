@@ -153,8 +153,9 @@ var docCookies = {
 			// check user password.
 			if( password_field.val() === password ) {
 				// Set cookie on succesful login
-				docCookies.setItem( 'user_login_check', '1', 0, '/' )
-				return true;
+				docCookies.setItem( 'user_login_check', '1', 0, '/' );
+        		window.location.assign('/dashboard.html');
+				return false;
 			}
 
 			// show inout field error
