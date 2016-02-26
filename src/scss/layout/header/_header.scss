@@ -34,7 +34,7 @@
 		}
 		@include screen(tablet-l) {
 			float:left;
-			margin:22px 0 0 30px;
+			margin:22px 0 0 20px;
 			line-height:normal;
 			font-size:0;
 		}
@@ -170,7 +170,7 @@
 		@include screen(tablet-l) {
 			float:right;
 			background:none;
-			margin:13px 0 0 0;
+			margin:12px 0 0 0;
 			position:static;
 			left:0;
 			top:0;
@@ -200,10 +200,10 @@
 				@include border-radius(20px);
 				@include screen(tablet-l) {
 					font-size:15px;
-					padding:8px 15px;
+					padding:8px 10px;
 				}
 				@include screen(desktop) {
-					padding:8px 25px;
+					padding:8px 20px;
 				}
 				&:hover , &.active{
 					background:$blue;

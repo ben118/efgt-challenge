@@ -966,7 +966,7 @@ input[type="password"] {
   @media only screen and (min-width: 1024px) {
     .header .logo {
       float: left;
-      margin: 22px 0 0 30px;
+      margin: 22px 0 0 20px;
       line-height: normal;
       font-size: 0; } }
   @media only screen and (min-width: 1140px) {
@@ -1095,7 +1095,7 @@ input[type="password"] {
     .header .navigation {
       float: right;
       background: none;
-      margin: 13px 0 0 0;
+      margin: 12px 0 0 0;
       position: static;
       left: 0;
       top: 0;
@@ -1126,10 +1126,10 @@ input[type="password"] {
       @media only screen and (min-width: 1024px) {
         .header .navigation li a {
           font-size: 15px;
-          padding: 8px 15px; } }
+          padding: 8px 10px; } }
       @media only screen and (min-width: 1140px) {
         .header .navigation li a {
-          padding: 8px 25px; } }
+          padding: 8px 20px; } }
       .header .navigation li a:hover, .header .navigation li a.active {
         background: #214975; }
         @media only screen and (min-width: 1024px) {
