@@ -1242,6 +1242,10 @@ input[type="password"] {
       .footer .copyright {
         font-size: 14px;
         margin: 0; } }
+    .footer .copyright a {
+      color: #fff; }
+      .footer .copyright a:hover {
+        text-decoration: underline; }
   .footer .social-links {
     color: #fff;
     text-align: center;
@@ -1255,6 +1259,8 @@ input[type="password"] {
         top: 2px; } }
     .footer .social-links a {
       color: #fff; }
+      .footer .social-links a:hover {
+        text-decoration: underline; }
 
 .program-login {
   padding: 50px 0; }
