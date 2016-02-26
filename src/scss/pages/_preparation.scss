@@ -979,13 +979,36 @@
 		}
 	}
 
-	&__tour, &__community, &__resources, &__recipes, &__support , &__facebook , &__efgt{
+	&__bigideas{
 		color: $gray;
 		padding-top: 53px;
 		padding-bottom: 180px;
 		@include screen(mobile-max) {
 			padding-bottom: 90px;
 			padding-top: 27px;
+		}
+		.lesson-page-title{
+			i{
+				display: block;
+				font-size: 40px;
+				color: $green;
+				margin-bottom: 12px;
+				@include screen(mobile-max) {
+					font-size: 30px;
+					margin-bottom: 6px;
+				}
+			}
+			h1{
+				color:$green;
+				font-size: 32px;
+				line-height: 40px;
+				margin-bottom:30px;
+				@include screen(mobile-max) {
+					font-size:26px;
+					line-height:30px;
+					margin-bottom: 20px;
+				}
+			}
 		}
 		.container{
 			max-width: 604px;
@@ -1028,18 +1051,6 @@
 			@include screen(mobile-max) {
 				font-size: 15px;
 				line-height: 21px;
-			}
-		}
-		.lesson-page-title{
-			.menuicon-tour{
-				display: block;
-				font-size: 43px;
-				color: $blue;
-				margin-bottom: 20px;
-				@include screen(mobile-max) {
-					font-size: 30px;
-					margin-bottom: 15px;
-				}
 			}
 		}
 		.less-page-header-copy{
@@ -1354,7 +1365,7 @@
 			}
 		}
 	}
-	&__recipes, &__support , &__efgt{
+	&__bigideas{
 		.btn-area-top{
 			margin-bottom: 103px;
 		}
@@ -1393,29 +1404,7 @@
 				max-width: 608px;
 			}
 			@include screen(mobile-max) {
-				padding: 0;
-			}
-		}
-		.lesson-page-title{
-			.menuicon-recipes{
-				display: block;
-				font-size: 39px;
-				color: $blue;
-				margin-bottom: 24px;
-				@include screen(mobile-max) {
-					font-size: 30px;
-					margin-bottom: 15px;
-				}
-			}
-			.menuicon-bulb{
-				display: block;
-				font-size: 50px;
-				color: $blue;
-				margin-bottom: 17px;
-				@include screen(mobile-max) {
-					font-size: 30px;
-					margin-bottom: 6px;
-				}
+				padding: 0 20px;
 			}
 		}
 		h2{
@@ -1439,22 +1428,14 @@
 		.drh_lesson_video{
 			margin-bottom: 45px;
 		}
-	}
-	&__support{
-		.lesson-page-title{
-			.menuicon-support , .menuicon-calendar , 
-			.menuicon-downloads , .menuicon-phone-alt,
-			.menuicon-bulb{
-				display: block;
-				font-size: 50px;
-				color: $blue;
-				margin-bottom: 17px;
-				@include screen(mobile-max) {
-					font-size: 30px;
-					margin-bottom: 6px;
-				}
+		.drh_lesson_video-tab-nav li.is-open a , .drh_lesson_video-tab-nav li:hover a{
+			color:$green;
+			&:after{
+				color:$green;
 			}
 		}
+	}
+	&__support{
 		.faq-list{
 			max-width: 632px;
 			margin: 0 auto 95px;
