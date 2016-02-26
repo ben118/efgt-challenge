@@ -979,7 +979,7 @@
 		}
 	}
 
-	&__bigideas{
+	&__bigideas , &__recipes{
 		color: $gray;
 		padding-top: 53px;
 		padding-bottom: 180px;
@@ -1135,9 +1135,9 @@
 				margin-bottom: 31px;
 			}
 			.btn{
-				max-width: 210px;
-				padding: 0;
+				max-width: 270px;
 				width: 100%;
+				margin:0 5px;
 			}
 		}
 		article{
@@ -1365,7 +1365,7 @@
 			}
 		}
 	}
-	&__bigideas{
+	&__bigideas , &__recipes{
 		.btn-area-top{
 			margin-bottom: 103px;
 		}
@@ -1395,7 +1395,6 @@
 			}
 			.btn{
 				width: 190px;
-				padding: 0;
 			}
 		}
 		.container{
@@ -1420,9 +1419,9 @@
 				margin-bottom: 31px;
 			}
 			.btn{
-				max-width: 210px;
-				padding: 0;
+				max-width: 270px;
 				width: 100%;
+				margin:0 5px;
 			}
 		}
 		.drh_lesson_video{
@@ -2283,5 +2282,159 @@
 				}
 			}
 		}
+	}
+}
+
+.kitchen-signup-form{
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 28px;
+	padding-top: 95px;
+	padding-left: 20px;
+	background-position: 414px 64px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: 399px 458px;
+	margin-bottom: 72px;
+	height: 557px;
+	background-image:url("#{$imagedir}/mark-headshot1.png");
+	@include screen(tablet-max) {
+		background: none !important;
+		padding-left: 0;
+		padding-top: 55px;
+		padding-bottom: 0;
+		margin-bottom: 40px;
+	}
+
+	.form-container{
+		max-width: 353px;
+		width: 100%;
+		text-align: center;
+		@include screen(tablet-max) {
+			margin: 0 auto;
+		}
+	}
+	
+	.form-header{
+		margin-bottom: 31px;
+	}
+	.kitchen-logo{
+		margin: 0 auto 30px;
+		padding: 0;
+		max-width: 172px;
+	}
+	.gform_wrapper{
+		margin-bottom: 27px;
+		.top_label{
+			.gfield_label{
+				display: none;
+			}
+		}
+	}
+	.form-content{
+		display: block;
+		margin-bottom: 40px;
+		position: relative;
+		a{
+			font-size: 17px;
+			text-decoration: underline;
+			font-family: $pt-sans;
+			letter-spacing: 0.02em;
+		}
+		ul{
+			margin:0 0 26px; padding: 0;
+			list-style: none;
+			li{
+				margin: 0;
+				padding: 0;
+			}
+		}
+		.gform_button{
+			width: 210px;
+			line-height: 48px;
+			height: 49px;
+			text-align: center;
+			background: $green;
+			color: $white;
+			font-size: 17px !important;
+			font-family: $pt-sans;
+			box-shadow: none;
+			border:0;
+			padding: 0 !important;
+			margin: 0 auto !important;
+			@include border-radius(40px);
+			text-transform: none;
+			display: block !important;
+			&:hover{
+				background: darken($green , 5%);
+			}
+		}
+	}
+	.copy{
+		font-family: $pt-sans;
+		p{
+			font-size: 17px;
+			line-height: 28px;
+			font-family: $pt-sans;
+			color: $gray;
+			letter-spacing: 0.02em;
+			margin-bottom: 0;
+			@include screen(mobile-max) {
+				font-size: 15px;
+				line-height: 21px;
+			}
+		}
+	}
+	input[type="text"], input[type="email"] {
+		border: 1px solid #cecece;
+		height: 40px;
+		font-size: 17px !important;
+		line-height: 22px;
+		padding: 7px 8px !important;
+		margin-bottom: 18px !important;
+		width: 100% !important;
+		display: block;
+		font-family: $pt-sans !important;
+		text-align: left;
+		letter-spacing: 0.02em !important;
+		@include border-radius(0);
+	}
+	.gform_ajax_spinner{
+		position: absolute;
+		bottom: 0;
+	}
+	.gfield_error{
+		input[type="text"], input[type="email"]{
+			border-color: $red !important;
+		}
+		.gfield_description{
+			display: none !important;
+		}
+		&.gfield{
+			padding: 0 !important;
+			margin: 0 !important;
+			border: 0 !important;
+			background-color: transparent !important;
+			width: 100% !important;
+			.ginput_container{
+				padding: 0 !important;
+				margin: 0 !important;
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+		}
+	}
+	.validation_error{
+		margin-bottom: 10px !important;
+		color: $red !important;
+		font-size: 13px !important;
+		text-align: center !important;
+		font-weight: 400 !important;
+		border: 0 !important;
+		padding: 0!important;
+		width: 100% !important;
+	}
+	label{
+		display: none;
 	}
 }

@@ -103,7 +103,9 @@
 			display:table;
 			margin:0 auto;
 			@include screen(tablet) {
-				float:right
+				float:right;
+				padding-top:8px;
+				padding-bottom:8px;
 			}
 		}
 	}	
