@@ -1261,19 +1261,7 @@
 				display: -moz-flex;
 				display: -ms-flexbox;
 				display: flex;
-				
-			}
-		}
-		.lesson-page-title{
-			.menuicon-downloads{
-				display: block;
-				font-size: 46px;
-				color: $blue;
-				margin-bottom: 18px;
-				@include screen(mobile-max) {
-					font-size: 30px;
-					margin-bottom: 15px;
-				}
+				min-height: 215px;
 			}
 		}
 		.resources-box{
@@ -1338,6 +1326,14 @@
 				font-size: 14px;
 				font-weight: 600;
 				margin-bottom: 5px;
+			}
+			.btn{
+				min-width:inherit;
+				padding:5px 25px;
+				i{
+					position:relative;
+					top:2px;
+				}
 			}
 		}
 		.box-option{

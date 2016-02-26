@@ -2433,16 +2433,8 @@ input[type="password"] {
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flexbox;
-      display: flex; }
-  .drh_lesson__resources .lesson-page-title .menuicon-downloads {
-    display: block;
-    font-size: 46px;
-    color: #214975;
-    margin-bottom: 18px; }
-    @media only screen and (max-width: 767px) {
-      .drh_lesson__resources .lesson-page-title .menuicon-downloads {
-        font-size: 30px;
-        margin-bottom: 15px; } }
+      display: flex;
+      min-height: 215px; }
   .drh_lesson__resources .resources-box {
     margin-bottom: 67px; }
     .drh_lesson__resources .resources-box:before, .drh_lesson__resources .resources-box:after {
@@ -2500,6 +2492,12 @@ input[type="password"] {
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 5px; }
+    .drh_lesson__resources .box .btn {
+      min-width: inherit;
+      padding: 5px 25px; }
+      .drh_lesson__resources .box .btn i {
+        position: relative;
+        top: 2px; }
   .drh_lesson__resources .box-option {
     overflow: hidden; }
     .drh_lesson__resources .box-option .box-media {
