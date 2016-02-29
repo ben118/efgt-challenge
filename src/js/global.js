@@ -76,6 +76,16 @@ var docCookies = {
   }
 };
 
+/**
+ * Email validation function.
+ * @param  {[type]} email [description]
+ * @return {[type]}       [description]
+ */
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 (function($){
 	$(document).ready(function() {
 
@@ -208,6 +218,63 @@ var docCookies = {
 	              });
 	        });
 		}
+
+    /**
+     * Support page: Contact form ajax functionality
+     */
+    if( '/support.html' === window.location.pathname ) {
+
+      console.log('event added');
+
+      $( 'form', '#contactsForm' ).submit(function(){
+
+        // Cache current object.
+        var $this = $(this);
+        var loader = $('#ajaxloader');
+        var thank_you_msg = $('.contact-thanks-msg');
+
+        var message = $( 'textarea[name="message"]', $this ).val().trim();
+        var email = $( 'input[name="email"]', $this ).val().trim();
+
+        // Check email.
+        if( ! validateEmail( email ) ) {
+            alert( 'Please enter valid email');
+            return false;
+        }
+
+        // Check message.
+        if( ! message ) {
+            alert( 'Please enter message');
+            return false;
+        }
+
+        // Ajax request.
+        $.ajax({
+          url: $this.attr('action'),
+          method: 'post',
+          data : {
+            action: 'support_content_form',
+            fname: $( 'input[name="fname"]', $this ).val(),
+            email: email,
+            message: message
+          },
+          beforeSend: function() {
+            loader.show();
+          },
+          success: function(res){
+            if( 'success' == res.status ) {
+              $this.hide();
+              thank_you_msg.show();
+            }
+            loader.hide();
+          },
+          dataType: 'json',
+        });
+
+
+        return false;
+      });
+    }
 
 	});
 })(jQuery);
