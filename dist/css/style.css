@@ -2555,7 +2555,7 @@ textarea {
     .drh_lesson__bigideas .btn-area-top .btn, .drh_lesson__recipes .btn-area-top .btn, .drh_lesson__schedule .btn-area-top .btn, .drh_lesson__support .btn-area-top .btn {
       max-width: 270px;
       width: 100%;
-      margin: 0 5px; }
+      margin: 0 5px 20px 5px; }
   .drh_lesson__bigideas .drh_lesson_video, .drh_lesson__recipes .drh_lesson_video, .drh_lesson__schedule .drh_lesson_video, .drh_lesson__support .drh_lesson_video {
     margin-bottom: 45px; }
   .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a {
