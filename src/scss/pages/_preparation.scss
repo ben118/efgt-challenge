@@ -1562,6 +1562,36 @@
 					padding: 25px 10px;
 				}
 			}
+			.contatc-thanks-msg{
+				text-align:center;
+				@include screen(tablet) {
+					margin:50px 0;
+				}
+				h5{
+					i{
+						display: block;
+						font-size: 40px;
+						color: $green;
+						margin-bottom: 12px;
+						@include screen(mobile-max) {
+							font-size: 30px;
+							margin-bottom: 6px;
+						}
+					}
+				}	
+				h6{
+					font-size:18px;
+					font-family:$pt-sans;
+					font-weight:700;
+					margin:0 0 10px 0;
+					text-transform:unset;
+				}
+				p{
+					font-size:15px;
+					line-height:18px;
+					font-family:$pt-sans;
+				}
+			}
 		}
 		.drh_lesson_video{
 			margin-bottom: 89px;
