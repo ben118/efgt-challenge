@@ -2684,6 +2684,8 @@ textarea {
         text-align: left; }
       .drh_lesson__support .lesson-contactus .gform_wrapper .ginput_container {
         margin: 0; }
+      .drh_lesson__support .lesson-contactus .gform_wrapper .error {
+        padding-top: 0; }
     .drh_lesson__support .lesson-contactus h3.gform_title {
       color: #8cbd2f;
       text-align: center;
