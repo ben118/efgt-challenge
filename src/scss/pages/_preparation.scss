@@ -921,6 +921,7 @@
 						vertical-align: top;
 						display: inline-block;
 						padding-top: 1px;
+						font-size:14px;
 						@include screen(mobile-max) {
 							display: none;
 						}

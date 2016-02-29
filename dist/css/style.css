@@ -2162,7 +2162,8 @@ textarea {
         .drh_lesson_downloads-list li .btn span {
           vertical-align: top;
           display: inline-block;
-          padding-top: 1px; }
+          padding-top: 1px;
+          font-size: 14px; }
           @media only screen and (max-width: 767px) {
             .drh_lesson_downloads-list li .btn span {
               display: none; } }
