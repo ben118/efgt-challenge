@@ -2706,27 +2706,27 @@ textarea {
       @media only screen and (max-width: 767px) {
         .drh_lesson__support .lesson-contactus .box {
           padding: 25px 10px; } }
-    .drh_lesson__support .lesson-contactus .contatc-thanks-msg {
+    .drh_lesson__support .lesson-contactus .contact-thanks-msg {
       text-align: center; }
       @media only screen and (min-width: 768px) {
-        .drh_lesson__support .lesson-contactus .contatc-thanks-msg {
+        .drh_lesson__support .lesson-contactus .contact-thanks-msg {
           margin: 50px 0; } }
-      .drh_lesson__support .lesson-contactus .contatc-thanks-msg h5 i {
+      .drh_lesson__support .lesson-contactus .contact-thanks-msg h5 i {
         display: block;
         font-size: 40px;
         color: #8cbd2f;
         margin-bottom: 12px; }
         @media only screen and (max-width: 767px) {
-          .drh_lesson__support .lesson-contactus .contatc-thanks-msg h5 i {
+          .drh_lesson__support .lesson-contactus .contact-thanks-msg h5 i {
             font-size: 30px;
             margin-bottom: 6px; } }
-      .drh_lesson__support .lesson-contactus .contatc-thanks-msg h6 {
+      .drh_lesson__support .lesson-contactus .contact-thanks-msg h6 {
         font-size: 18px;
         font-family: "PT Sans", sans-serif;
         font-weight: 700;
         margin: 0 0 10px 0;
         text-transform: unset; }
-      .drh_lesson__support .lesson-contactus .contatc-thanks-msg p {
+      .drh_lesson__support .lesson-contactus .contact-thanks-msg p {
         font-size: 15px;
         line-height: 18px;
         font-family: "PT Sans", sans-serif; }
