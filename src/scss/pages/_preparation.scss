@@ -1344,7 +1344,7 @@
 			}
 		}
 	}
-	&__bigideas , &__recipes , &__schedule{
+	&__bigideas , &__recipes , &__schedule , &__support{
 		.btn-area-top{
 			margin-bottom: 103px;
 		}
@@ -1515,7 +1515,7 @@
 				    font-family: $pt-sans;
 				}
 				form li, li{
-					margin: 0;
+					margin: 0 0 25px 0;
 					padding: 0;
 				}
 				label{
@@ -1532,12 +1532,16 @@
 						font-size: 15px;
 					}
 				}
+				textarea{
+					height:120px;
+					text-align:left;
+				}
 				.ginput_container{
 					margin:0;
 				}
 			}
 			h3.gform_title{
-				color: $blue;
+				color: $green;
 				text-align: center;
 				font-size: 32px;
 				line-height: 48px;

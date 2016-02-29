@@ -167,5 +167,47 @@ var docCookies = {
 			return false;
 		});
 
+		if ($('.has-accordion').length) {
+			$(document).on('click', '.has-accordion .accordion-title', function (e) {
+				e.preventDefault();
+
+				// cache current object
+				$this = $(this);
+
+				// current accordian item
+				var accordian_item = $(this).next();
+
+				// close all tabs
+				//$('.accordion-title', '.has-accordion').not( $this ).removeClass('is-open');
+				//$( '.accordion-item', '.has-accordion' ).not( accordian_item ).removeClass('is-open');
+
+				// scroll to current accordian
+				$( 'html,body' ).animate({
+					scrollTop: $this.offset().top
+				}, 500 );
+
+				// open/close current accordian
+				accordian_item.toggleClass('is-open');
+				$this.toggleClass('is-open');
+			})
+		}
+
+		if($('.scroll-to-section').length) {
+			 $(function() {
+	              $('.scroll-to-section').click(function() {
+	                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	                  var target = $(this.hash);
+	                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	                  if (target.length) {
+	                    $('html,body').animate({
+	                      scrollTop: target.offset().top
+	                    }, 1000);
+	                    return false;
+	                  }
+	                }
+	              });
+	        });
+		}
+
 	});
 })(jQuery);
