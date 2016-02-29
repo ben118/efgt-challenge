@@ -232,21 +232,41 @@ function validateEmail(email) {
         var $this = $(this);
         var loader = $('#ajaxloader');
         var thank_you_msg = $('.contact-thanks-msg');
+        var errors = $( '.error', $this );
+        var error_arr = [];
+
+        // Hide errors.
+        errors.hide();
 
         var message = $( 'textarea[name="message"]', $this ).val().trim();
         var email = $( 'input[name="email"]', $this ).val().trim();
+        var fname = $( 'input[name="fname"]', $this ).val().trim();
+
+        // Check full name.
+        if( ! fname ) {
+            $( 'input[name="fname"]', $this ).next().show();
+            error_arr.push('fname');
+        }
 
         // Check email.
         if( ! validateEmail( email ) ) {
-            alert( 'Please enter valid email');
-            return false;
+            $( 'input[name="email"]', $this ).next().show();
+            error_arr.push('email');
         }
 
         // Check message.
         if( ! message ) {
-            alert( 'Please enter message');
-            return false;
+          $( 'textarea[name="message"]', $this ).next().show();
+            error_arr.push('message');
         }
+
+
+        // Check if form has errors.
+        if( error_arr.length ) {
+          return false;
+        }
+
+
 
         // Ajax request.
         $.ajax({
@@ -254,19 +274,19 @@ function validateEmail(email) {
           method: 'post',
           data : {
             action: 'support_content_form',
-            fname: $( 'input[name="fname"]', $this ).val(),
+            fname: fname,
             email: email,
             message: message
           },
           beforeSend: function() {
-            loader.show();
+            //loader.show();
           },
           success: function(res){
             if( 'success' == res.status ) {
               $this.hide();
               thank_you_msg.show();
             }
-            loader.hide();
+            //loader.hide();
           },
           dataType: 'json',
         });
