@@ -15,7 +15,7 @@ if( ! empty( $_POST['email'] ) && ! empty( $_POST['message'] ) ) {
 
     // Send email.
     $email_status = mail(
-      'ravinder@anattadesign.com',
+      'eatfatgetthin@drhyman.com',
       'Participant: Question from Eat Fat, Get Thin Challenge',
       $message,
       $headers
