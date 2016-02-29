@@ -2433,7 +2433,7 @@ textarea {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      min-height: 215px; }
+      min-height: 300px; }
   .drh_lesson__resources .resources-box {
     margin-bottom: 67px; }
     .drh_lesson__resources .resources-box:before, .drh_lesson__resources .resources-box:after {
