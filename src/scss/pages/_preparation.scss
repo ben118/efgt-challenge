@@ -92,13 +92,6 @@
 			background-image:url("#{$imagedir}/evening-icon.png");
 		}
 	}
-	.menuicon-calendar{
-		font-size: 28px;
-		display: inline-block;
-		vertical-align: middle;
-		margin-top: -5px;
-		margin-right: 6px;
-	}
 	&-title{
 		font-family: $pt-sans;
 		color: $gray;
@@ -1351,7 +1344,7 @@
 			}
 		}
 	}
-	&__bigideas , &__recipes{
+	&__bigideas , &__recipes , &__schedule{
 		.btn-area-top{
 			margin-bottom: 103px;
 		}
@@ -1599,6 +1592,25 @@
 		}
 		.community-call-box .call-time > span{
 			letter-spacing:0.05em;
+		}
+		.schedule-calender-main{
+			padding:0 0 40px 0;
+			@include screen(tablet) {
+				padding:0 0 80px 0;
+			}
+		}
+		.schedule-calender-box{
+			background:#f3f5f4;
+			margin:0 0 20px 0;
+		}
+		.schedule-callrecords-main{
+			padding:20px 0 40px 0;
+			@include screen(tablet) {
+				padding:20px 0 60px 0;
+			}
+		}
+		.schedule-callrecords{
+			margin:0 0 20px 0;
 		}
 	}
 	&__fullschedule{
