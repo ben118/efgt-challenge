@@ -92,12 +92,19 @@ function validateEmail(email) {
 		//Redirect user to login page if he/she is not login.
 		if( '/login.html' === document.location.pathname ) {
 
-				// If login cookie exist then redirect user to dashboard page.
-				if( docCookies.getItem('user_login_check') ) {
-					window.location.assign( '/dashboard.html' );
-				}
+			// If login cookie exist then redirect user to dashboard page.
+			if( docCookies.getItem('user_login_check') ) {
+				window.location.assign( '/dashboard.html' );
+			}
 		}else if( ! docCookies.getItem('user_login_check') ) {
 			window.location.assign('/login.html');
+		}
+
+		// Redirect user to transcripts folder link
+		if( '/transcripts.html' === document.location.pathname ) {
+			if( docCookies.getItem( 'user_download_transcript' ) ) {
+				window.location.assign('/');
+			}
 		}
 
 		$('.header .menu-toggle').click(function () {
@@ -154,8 +161,19 @@ function validateEmail(email) {
 			// Cache jquery objects.
 			var password_field = $( 'input[type="password"]', $(this) );
 			var error_field    = 	$( '.error', $(this) );
+			var password = cookie_name = redirect_to = '';
 
-			var password = 'eatfatmarch';
+			if( '/login.html' === document.location.pathname ) {
+				password 	= 'eatfatmarch';
+				cookie_name = 'user_login_check';
+				redirect_to = '/dashboard.html';
+			} else if ( '/transcripts.html' === document.location.pathname ) {
+				password 	= 'publictv';
+				cookie_name = 'user_download_transcript';
+				redirect_to = '/';
+			} else {
+				return false;
+			}
 
 			// hide error field.
 			error_field.hide();
@@ -163,8 +181,8 @@ function validateEmail(email) {
 			// check user password.
 			if( password_field.val() === password ) {
 				// Set cookie on succesful login
-				docCookies.setItem( 'user_login_check', '1', 0, '/' );
-        		window.location.assign('/dashboard.html');
+				docCookies.setItem( cookie_name, '1', 0, '/' );
+        		window.location.assign( redirect_to );
 				return false;
 			}
 
@@ -223,8 +241,6 @@ function validateEmail(email) {
      * Support page: Contact form ajax functionality
      */
     if( '/support.html' === window.location.pathname ) {
-
-      console.log('event added');
 
       $( 'form', '#contactsForm' ).submit(function(){
 
