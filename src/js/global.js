@@ -96,7 +96,11 @@ function validateEmail(email) {
 			if( docCookies.getItem('user_login_check') ) {
 				window.location.assign( '/dashboard.html' );
 			}
-		}else if( ! docCookies.getItem('user_login_check') ) {
+		}else if(
+			! docCookies.getItem('user_login_check')
+			&& '/transcripts.html' !== document.location.pathname
+			&& '/transcripts/download.html' !== document.location.pathname
+		) {
 			window.location.assign('/login.html');
 		}
 
