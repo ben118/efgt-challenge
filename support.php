@@ -18,11 +18,6 @@ if( ! empty( $_POST['email'] ) && ! empty( $_POST['message'] ) ) {
     // full name
     $fname = ( $fname = filter_var( $_POST['fname'], FILTER_SANITIZE_STRING ) ) ? $fname : '';
 
-    // Send from email param.
-    $headers = "From: $fname <$email>". "\r\n";
-    $headers .= "MIME-version: 1.0\n";
-    $headers .= "Content-type: text/html; charset= iso-8859-1\n";
-
     try {
 
       $mandrill = new Mandrill('fW1FprIIJOZYrUHv914Ghw');
@@ -41,15 +36,14 @@ if( ! empty( $_POST['email'] ) && ! empty( $_POST['message'] ) ) {
       );
       $result = $mandrill->messages->send($message);
 
+      if( in_array( $result['status'], array( 'rejected', 'invalid' ) ) ) {
+        $result['status'] = 'error';
+      }else{
+        $result['status'] = 'success';
+      }
+
     } catch (Exception $e) {
       error_log( print_r( "[$date] [$email] ". $e->getMessage() . "\n", true )."\n", 3, 'logs/debug_email.log' );
-    }
-
-
-    if( in_array( $result['status'], array( 'rejected', 'invalid' ) ) ) {
-      $result['status'] = 'error';
-    }else{
-      $result['status'] = 'success';
     }
   }else {
     $result['status'] = 'error';
