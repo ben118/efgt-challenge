@@ -16,7 +16,9 @@ if( ! empty( $_POST['email'] ) && ! empty( $_POST['message'] ) ) {
     $fname = ( $fname = filter_var( $_POST['fname'], FILTER_SANITIZE_STRING ) ) ? $fname : '';
 
     // Send from email param.
-    $headers = "From: $fname <$email>". "\r\n";
+    $headers .= "MIME-version: 1.0\n";
+    $headers .= "Content-type: text/html; charset= iso-8859-1\n";
+    $headers .= "From: $fname <$email>". "\r\n";
 
     try {
       // Send email.
