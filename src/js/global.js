@@ -101,11 +101,11 @@ function validateEmail(email) {
 		}
 
 		// Redirect user to transcripts folder link
-		if( '/transcripts.html' === document.location.pathname ) {
-			if( docCookies.getItem( 'user_download_transcript' ) ) {
-				window.location.assign('/');
-			}
-		}
+		// if( '/transcripts.html' === document.location.pathname ) {
+		// 	if( docCookies.getItem( 'user_download_transcript' ) ) {
+		// 		window.location.assign('/');
+		// 	}
+		// }
 
 		$('.header .menu-toggle').click(function () {
 			$(this).toggleClass('active');
@@ -182,7 +182,13 @@ function validateEmail(email) {
 			if( password_field.val() === password ) {
 				// Set cookie on succesful login
 				docCookies.setItem( cookie_name, '1', 0, '/' );
-        		window.location.assign( redirect_to );
+				window.location.assign( redirect_to );
+
+				// Redirect to other link after download.
+				if( '/transcripts.html' === document.location.pathname ) {
+					//open download link in new page.
+					window.open( '/downloads/fat-summit-transcripts.zip' );
+				}
 				return false;
 			}
 
