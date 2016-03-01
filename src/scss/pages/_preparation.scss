@@ -113,6 +113,11 @@
 				font-size: 26px;
 				margin-bottom: 20px;
 			}
+			i{
+				position:relative;
+				margin:0 8px 0 0;
+				top:2px;
+			}
 		}
 	}
 	&-nav{
@@ -865,7 +870,7 @@
 				}
 				.file-name{
 					font-size: 16px;
-					line-height: 18px;
+					line-height: 24px;
 					font-family: $pt-sans;
 					color: #464646;
 					vertical-align: top;
@@ -909,12 +914,14 @@
 						display: inline-block;
 						vertical-align: top;
 						padding-top: 8px;
+						font-size:16px;
 						@include screen(tablet-max) {
 							margin-right: 6px;
 						}
 						@include screen(mobile-max) {
 							padding-top: 3px;
 							margin:0;
+							font-size:15px;
 						}
 					}
 					span{
@@ -924,6 +931,7 @@
 						font-size:14px;
 						@include screen(mobile-max) {
 							display: none;
+							font-size:12px;
 						}
 					}
 					&:hover{
@@ -1009,7 +1017,10 @@
 		.container{
 			max-width: 604px;
 			margin: 0 auto;
-			padding: 0;
+			padding: 0 20px;
+			@include screen(tablet-l) {
+				padding:0;
+			}
 		}
 		h1{
 			font-family: $pt-sans;
@@ -1156,7 +1167,7 @@
 				max-width: 608px;
 			}
 			@include screen(mobile-max) {
-				padding: 0;
+				padding: 0 20px;
 			}
 		}
 		.small-cnt{
@@ -1201,7 +1212,7 @@
 				max-width: 608px;
 			}
 			@include screen(mobile-max) {
-				padding: 0;
+				padding: 0 20px;
 			}
 		}
 		h2{
@@ -1255,7 +1266,9 @@
 				display: -moz-flex;
 				display: -ms-flexbox;
 				display: flex;
-				min-height: 300px;
+				@include screen(tablet) {
+					min-height: 300px;
+				}	
 			}
 		}
 		.resources-box{
@@ -1305,8 +1318,11 @@
 				font-family: $pt-sans;
 			}
 			.copy{
-				padding: 10px 20px;
+				padding: 30px 20px;
 				width: 100%;
+				@include screen(tablet) {
+					padding:20px;
+				}
 			}
 			.text{
 				font-family: $pt-sans;
@@ -1407,10 +1423,22 @@
 		.drh_lesson_video{
 			margin-bottom: 45px;
 		}
-		.drh_lesson_video-tab-nav li.is-open a , .drh_lesson_video-tab-nav li:hover a{
+		.drh_lesson_video-tab-nav li.is-open a , .drh_lesson_video-tab-nav li.is-open:hover a{
 			color:$green;
 			&:after{
 				color:$green;
+			}
+		}
+		.drh_lesson_video-tab-nav li:hover a{
+			color:$gray;
+			@include screen(tablet-l) {
+				color:$green;
+			}
+			&:after{
+				color: #cccccc;
+				@include screen(tablet-l) {
+					color:$green;
+				}
 			}
 		}
 	}
@@ -1493,8 +1521,14 @@
 			}
 		}
 		.lesson-contactus{
-			max-width: 600px;
-			margin: 0 auto;
+			max-width: 640px;
+			margin: 0 20px;
+			@include screen(mobile-l) {
+					margin:0 auto;
+			}
+			@include screen(tablet) {
+					max-width: 600px;
+			}
 			.gform_wrapper{
 				margin: 0;
 				padding: 0;
@@ -1516,8 +1550,11 @@
 				    font-family: $pt-sans;
 				}
 				form li, li{
-					margin: 0 0 25px 0;
+					margin: 0 0 15px 0;
 					padding: 0;
+					@include screen(tablet) {
+						margin:0 0 25px 0;
+					}
 				}
 				label{
 					display: block !important; 
@@ -1566,7 +1603,7 @@
 				@include border-radius(10px);
 				padding: 51px 118px 65px;
 				@include screen(mobile-max) {
-					padding: 25px 10px;
+					padding: 25px 20px;
 				}
 			}
 			.contact-thanks-msg{

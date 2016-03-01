@@ -1440,6 +1440,10 @@ textarea {
         .drh_lesson-title-sub {
           font-size: 26px;
           margin-bottom: 20px; } }
+      .drh_lesson-title-sub i {
+        position: relative;
+        margin: 0 8px 0 0;
+        top: 2px; }
   .drh_lesson-nav {
     position: relative; }
     .drh_lesson-nav:before, .drh_lesson-nav:after {
@@ -2100,7 +2104,7 @@ textarea {
                 margin: 0; } }
       .drh_lesson_downloads-list li .file-name {
         font-size: 16px;
-        line-height: 18px;
+        line-height: 24px;
         font-family: "PT Sans", sans-serif;
         color: #464646;
         vertical-align: top;
@@ -2151,14 +2155,16 @@ textarea {
         .drh_lesson_downloads-list li .btn .menuicon-downloads {
           display: inline-block;
           vertical-align: top;
-          padding-top: 8px; }
+          padding-top: 8px;
+          font-size: 16px; }
           @media only screen and (max-width: 1024px) {
             .drh_lesson_downloads-list li .btn .menuicon-downloads {
               margin-right: 6px; } }
           @media only screen and (max-width: 767px) {
             .drh_lesson_downloads-list li .btn .menuicon-downloads {
               padding-top: 3px;
-              margin: 0; } }
+              margin: 0;
+              font-size: 15px; } }
         .drh_lesson_downloads-list li .btn span {
           vertical-align: top;
           display: inline-block;
@@ -2166,7 +2172,8 @@ textarea {
           font-size: 14px; }
           @media only screen and (max-width: 767px) {
             .drh_lesson_downloads-list li .btn span {
-              display: none; } }
+              display: none;
+              font-size: 12px; } }
         .drh_lesson_downloads-list li .btn:hover {
           width: 123px;
           padding-left: 15px; }
@@ -2235,7 +2242,10 @@ textarea {
     .drh_lesson__tour .container, .drh_lesson__community .container, .drh_lesson__resources .container, .drh_lesson__recipes .container, .drh_lesson__support .container, .drh_lesson__facebook .container, .drh_lesson__bigideas .container {
       max-width: 604px;
       margin: 0 auto;
-      padding: 0; }
+      padding: 0 20px; }
+      @media only screen and (min-width: 1024px) {
+        .drh_lesson__tour .container, .drh_lesson__community .container, .drh_lesson__resources .container, .drh_lesson__recipes .container, .drh_lesson__support .container, .drh_lesson__facebook .container, .drh_lesson__bigideas .container {
+          padding: 0; } }
     .drh_lesson__tour h1, .drh_lesson__community h1, .drh_lesson__resources h1, .drh_lesson__recipes h1, .drh_lesson__support h1, .drh_lesson__facebook h1, .drh_lesson__bigideas h1 {
       font-family: "PT Sans", sans-serif;
       font-size: 42px;
@@ -2357,7 +2367,7 @@ textarea {
         max-width: 608px; } }
     @media only screen and (max-width: 767px) {
       .drh_lesson__tour .container {
-        padding: 0; } }
+        padding: 0 20px; } }
   .drh_lesson__tour .small-cnt.has-border {
     border-top: 1px solid #efefef;
     padding-top: 54px; }
@@ -2390,7 +2400,7 @@ textarea {
         max-width: 608px; } }
     @media only screen and (max-width: 767px) {
       .drh_lesson__resources .container {
-        padding: 0; } }
+        padding: 0 20px; } }
   .drh_lesson__resources h2 {
     margin-bottom: 35px; }
     @media only screen and (max-width: 767px) {
@@ -2433,8 +2443,10 @@ textarea {
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flexbox;
-      display: flex;
-      min-height: 300px; }
+      display: flex; }
+      @media only screen and (min-width: 768px) {
+        .drh_lesson__resources .flex-box .box {
+          min-height: 300px; } }
   .drh_lesson__resources .resources-box {
     margin-bottom: 67px; }
     .drh_lesson__resources .resources-box:before, .drh_lesson__resources .resources-box:after {
@@ -2480,8 +2492,11 @@ textarea {
     .drh_lesson__resources .box p {
       font-family: "PT Sans", sans-serif; }
     .drh_lesson__resources .box .copy {
-      padding: 10px 20px;
+      padding: 30px 20px;
       width: 100%; }
+      @media only screen and (min-width: 768px) {
+        .drh_lesson__resources .box .copy {
+          padding: 20px; } }
     .drh_lesson__resources .box .text {
       font-family: "PT Sans", sans-serif;
       margin-bottom: 19px; }
@@ -2558,10 +2573,20 @@ textarea {
       margin: 0 5px 20px 5px; }
   .drh_lesson__bigideas .drh_lesson_video, .drh_lesson__recipes .drh_lesson_video, .drh_lesson__schedule .drh_lesson_video, .drh_lesson__support .drh_lesson_video {
     margin-bottom: 45px; }
-  .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a {
+  .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open:hover a, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open:hover a, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open:hover a, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open a, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open:hover a {
     color: #8cbd2f; }
-    .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a:after {
+    .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__bigideas .drh_lesson_video-tab-nav li.is-open:hover a:after, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__recipes .drh_lesson_video-tab-nav li.is-open:hover a:after, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__schedule .drh_lesson_video-tab-nav li.is-open:hover a:after, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open a:after, .drh_lesson__support .drh_lesson_video-tab-nav li.is-open:hover a:after {
       color: #8cbd2f; }
+  .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a {
+    color: #464646; }
+    @media only screen and (min-width: 1024px) {
+      .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a {
+        color: #8cbd2f; } }
+    .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a:after {
+      color: #cccccc; }
+      @media only screen and (min-width: 1024px) {
+        .drh_lesson__bigideas .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__recipes .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__schedule .drh_lesson_video-tab-nav li:hover a:after, .drh_lesson__support .drh_lesson_video-tab-nav li:hover a:after {
+          color: #8cbd2f; } }
   .drh_lesson__support .faq-list {
     max-width: 632px;
     margin: 0 auto 95px; }
@@ -2643,8 +2668,14 @@ textarea {
           .drh_lesson__support .faq-list dl dd .copy p, .drh_lesson__support .faq-list dl dd .copy li {
             font-family: "PT Sans", sans-serif; }
   .drh_lesson__support .lesson-contactus {
-    max-width: 600px;
-    margin: 0 auto; }
+    max-width: 640px;
+    margin: 0 20px; }
+    @media only screen and (min-width: 640px) {
+      .drh_lesson__support .lesson-contactus {
+        margin: 0 auto; } }
+    @media only screen and (min-width: 768px) {
+      .drh_lesson__support .lesson-contactus {
+        max-width: 600px; } }
     .drh_lesson__support .lesson-contactus .gform_wrapper {
       margin: 0;
       padding: 0;
@@ -2664,8 +2695,11 @@ textarea {
         color: #214975;
         font-family: "PT Sans", sans-serif; }
       .drh_lesson__support .lesson-contactus .gform_wrapper form li, .drh_lesson__support .lesson-contactus .gform_wrapper li {
-        margin: 0 0 25px 0;
+        margin: 0 0 15px 0;
         padding: 0; }
+        @media only screen and (min-width: 768px) {
+          .drh_lesson__support .lesson-contactus .gform_wrapper form li, .drh_lesson__support .lesson-contactus .gform_wrapper li {
+            margin: 0 0 25px 0; } }
       .drh_lesson__support .lesson-contactus .gform_wrapper label {
         display: block !important;
         font-size: 17px !important;
@@ -2710,7 +2744,7 @@ textarea {
       padding: 51px 118px 65px; }
       @media only screen and (max-width: 767px) {
         .drh_lesson__support .lesson-contactus .box {
-          padding: 25px 10px; } }
+          padding: 25px 20px; } }
     .drh_lesson__support .lesson-contactus .contact-thanks-msg {
       text-align: center; }
       @media only screen and (min-width: 768px) {
