@@ -9,17 +9,27 @@ if( ! empty( $_POST['email'] ) && ! empty( $_POST['message'] ) ) {
     ( $email = filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL) )
     &&  ( $message = filter_var( $_POST['message'], FILTER_SANITIZE_STRING ) )
   ) {
+
+    $date = date('Y-m-d h:m:s');
+
+    // full name
     $fname = ( $fname = filter_var( $_POST['fname'], FILTER_SANITIZE_STRING ) ) ? $fname : '';
+
     // Send from email param.
     $headers = "From: $fname <$email>". "\r\n";
 
-    // Send email.
-    $email_status = mail(
-      'eatfatgetthin@drhyman.com',
-      'Participant: Question from Eat Fat, Get Thin Challenge',
-      $message,
-      $headers
-    );
+    try {
+      // Send email.
+      $email_status = mail(
+        'eatfatgetthin@drhyman.com',
+        'Participant: Question from Eat Fat, Get Thin Challenge',
+        $message,
+        $headers
+      );
+    } catch (Exception $e) {
+      error_log( print_r( "[$date] [$email] ". $e->getMessage() . "\n", true )."\n", 3, WP_CONTENT_DIR.'/debug_email.log' );
+    }
+
 
     if( ! $email_status ) {
       $result['status'] = 'error';
