@@ -21,22 +21,23 @@ if( ! empty( $_POST['email'] ) && ! empty( $_POST['message'] ) ) {
     try {
 
       $mandrill = new Mandrill('fW1FprIIJOZYrUHv914Ghw');
-      $email_date = array(
+      $email_data = array(
           'html' => $message,
           'subject' => 'Participant: Question from Eat Fat, Get Thin Challenge',
           'from_email' => $email,
           'from_name' => $fname,
           'to' => array(
               array(
-                  'email' => 'ravinder@anattadesign.com',
+                  'email' => 'eatfatgetthin@drhyman.com',
                   //'name' =>  $toName,
                   'type' => 'to'
               )
           )
       );
-      $result = $mandrill->messages->send($message);
+      $result['mandrill'] = $mandrill->messages->send( $email_data );
 
-      if( in_array( $result['status'], array( 'rejected', 'invalid' ) ) ) {
+      // Check email sending status.
+      if( in_array( $result['mandrill'][0]['status'], array( 'rejected', 'invalid' ) ) ) {
         $result['status'] = 'error';
       }else{
         $result['status'] = 'success';
