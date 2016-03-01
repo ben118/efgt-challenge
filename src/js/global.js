@@ -170,7 +170,7 @@ function validateEmail(email) {
 			} else if ( '/transcripts.html' === document.location.pathname ) {
 				password 	= 'publictv';
 				cookie_name = 'user_download_transcript';
-				redirect_to = '/';
+				redirect_to = '/transcripts/download.html';
 			} else {
 				return false;
 			}
