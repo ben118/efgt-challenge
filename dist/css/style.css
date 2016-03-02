@@ -2138,8 +2138,8 @@ textarea {
         /* stops bg color from leaking outside the border: */
         width: 32px;
         height: 32px;
-        padding: 0 7px;
-        text-align: left;
+        padding: 0 6.5px;
+        text-align: center;
         overflow: hidden; }
         @media only screen and (max-width: 1024px) {
           .drh_lesson_downloads-list li .btn {
@@ -2186,6 +2186,8 @@ textarea {
             @media only screen and (max-width: 767px) {
               .drh_lesson_downloads-list li .btn:hover .menuicon-downloads {
                 margin: 0; } }
+          .drh_lesson_downloads-list li .btn:hover .btn {
+            text-align: center; }
   .drh_lesson_journal {
     border: 2px solid #f2f1ef;
     padding: 41px 42px 33px;

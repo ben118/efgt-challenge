@@ -896,8 +896,8 @@
 					@include border-radius(20px);
 					width: 32px;
 					height: 32px;
-					padding: 0 7px;
-					text-align: left;
+					padding: 0 6.5px;
+					text-align: center;
 					overflow: hidden;
 					@include screen(tablet-max) {
 						width: 123px;
@@ -946,6 +946,9 @@
 							@include screen(mobile-max) {
 								margin:0;
 							}
+						}
+						.btn{
+							text-align: center;
 						}
 					}
 				}
