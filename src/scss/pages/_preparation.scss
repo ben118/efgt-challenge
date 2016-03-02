@@ -595,7 +595,7 @@
 		}
 		&-item{
 			margin-bottom: 47px;
-			/*li{
+			li{
 				position: relative;
 				display: block;
 				color: #111111;
@@ -636,18 +636,8 @@
 						top: 5px;
 					}
 				}
-				&:hover, &.checked{
-					color: #898989;
-					&:after{
-						background-color: $blue;
-					}
-				}
-				&.checked{
-					text-decoration: line-through;
-				}
-			}*/
+			}
 		}
-
 	}
 	
 	&_tips{
